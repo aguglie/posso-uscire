@@ -13,8 +13,8 @@ export default [
   {
     name: '🟥 Epifania',
     details: zonaRossa.details,
-    from: '2021-01-05 00:00:00',
-    to: '2021-01-06 23:59:59',
+    from: '2021/01/05 00:00:00',
+    to: '2021/01/06 23:59:59',
     regions: ALL_REGIONS,
   },
 ]

@@ -13,8 +13,8 @@ export default [
   {
     name: '🟨 Zona Gialla rafforzata',
     details: zonaGialla.details,
-    from: '2021-01-07 00:00:00',
-    to: '2021-01-08 23:59:59',
+    from: '2021/01/07 00:00:00',
+    to: '2021/01/08 23:59:59',
     regions: ALL_REGIONS,
   },
 ]

@@ -15,8 +15,8 @@ const zonaArancione = {
 export default [
   {
     ...zonaArancione,
-    from: '2021-01-09 00:00:00',
-    to: '2021-01-10 23:59:59',
+    from: '2021/01/09 00:00:00',
+    to: '2021/01/10 23:59:59',
     regions: ALL_REGIONS,
   },
 ]
