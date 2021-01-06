@@ -3,9 +3,10 @@ import { ALL_REGIONS } from './Constants'
 const zonaRossa = {
   name: '🟥 Zona Rossa',
   details: [
-    '🚫 Bar, Ristoranti e negozi chiusi tranne che per asporto.',
-    '👭 Si può uscire dal proprio comune per raggiungere amici e parenti una volta al giorno.',
-    "📝 Serve l'autocertificazione.",
+    '🚫 Bar, ristoranti e negozi chiusi tranne che per asporto.',
+    '👭 Si può uscire (in coppia) dal proprio comune per raggiungere amici e parenti una volta al giorno. Senza cambiare regione.',
+    '🛏 Coprifuoco dalle 22.00 alle 05.00.',
+    "📝 Serve l'autocertificazione per qualsiasi spostamento.",
   ],
 }
 

@@ -44,7 +44,7 @@ function Rule({ rule }) {
   return (
     <Card className={classes.cardRoot} variant="outlined">
       <CardContent>
-        {dateFromTo && <Typography className={classes.dateFromTo} color="textSecondary" gutterBottom>
+        {dateFromTo && <Typography className={classes.dateFromTo} color="textPrimary" gutterBottom>
           📆 {dateFromTo}
         </Typography>
         }

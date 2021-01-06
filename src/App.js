@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import Header from './components/Header'
-import Copyright from './components/Copyright'
+import Disclaimer from './components/Disclaimer'
 import SearchBox from './components/SearchBox'
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
       <Box my={4}>
         <Header />
         <SearchBox/>
-        <Copyright />
+        <Disclaimer />
       </Box>
     </Container>
   )

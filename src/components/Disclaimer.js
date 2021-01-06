@@ -13,12 +13,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Copyright() {
+export default function Disclaimer() {
   const classes = useStyles()
   return (
     <Typography variant="body2" color="textSecondary" align="center" className={classes.copyrightBox} >
       <Box>
-        Le informazioni fornite potrebbero non essere corrette.
+        Le informazioni fornite potrebbero essere incomplete o non corrette.
+      </Box>
+      <Box>
+        Attenersi sempre a fonti governative ufficiali.
       </Box>
 
       <Box className={classes.contributeBox}>
