@@ -1,3 +1,4 @@
+import Box from '@material-ui/core/Box'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import List from '@material-ui/core/List'
@@ -79,7 +80,11 @@ export default function ActiveRulesList({ province }) {
   const activeRules = getActiveRules(province)
   return (
     <Typography variant="body2" color="textPrimary" className={classes.copyrightBox} >
-      {activeRules.map(rule => <Rule key={province.nome + rule.from} rule={rule}/>)}
+      {activeRules.length === 0
+        ? <Box textAlign="center" fontSize={20} color={'red'}>
+            Nessun risultato trovato.
+        </Box>
+        : activeRules.map(rule => <Rule key={province.nome + rule.from} rule={rule}/>)}
     </Typography>
   )
 }
