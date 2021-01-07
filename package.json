@@ -20,7 +20,8 @@
     "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "remove-accents": "^0.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

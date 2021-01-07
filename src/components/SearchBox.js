@@ -17,7 +17,9 @@ export default function SearchBox() {
   }
 
   urlUtils.hashConsumer((hash) => {
-    const foundRegion = regions.find(region => region.nome.toUpperCase().trim() === hash.toUpperCase().trim())
+    const foundRegion = regions.find(
+      region => urlUtils.prettify(region.nome.trim()).toUpperCase() === hash.toUpperCase().trim()
+    )
     if (foundRegion) {
       setRegion(foundRegion)
     }
