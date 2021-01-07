@@ -1,13 +1,15 @@
 import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import React from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import { getActiveRules } from '../rules'
 
 const useStyles = makeStyles((theme) => ({
@@ -29,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
   rule: {
     fontSize: 17,
   },
+  cardActions: {
+    justifyContent: 'center',
+    marginBottom: 10,
+  },
 }))
 
 function parseDate(date) {
@@ -36,8 +42,10 @@ function parseDate(date) {
 }
 
 function Rule({ rule }) {
+  const [showMoreDetails, setShowMoreDetails] = useState(false)
   const classes = useStyles()
-  const { from, to, details } = rule
+
+  const { from, to, details, moreDetails } = rule
 
   const dateFromTo = [(from ? `Dal ${parseDate(from)}` : ''), (to ? `Al ${parseDate(to)}` : '')].join(' ')
 
@@ -55,7 +63,7 @@ function Rule({ rule }) {
 
         {details && <Typography color="textPrimary" className={classes.rulesList}>
           <List component="nav" dense={true}>
-            {details.map(detail =>
+            {[...details, ...(showMoreDetails ? moreDetails : [])].map(detail =>
               <ListItem button key={detail}>
                 <ListItemText
                   classes={{ primary: classes.rule }}
@@ -67,6 +75,12 @@ function Rule({ rule }) {
         </Typography>
         }
       </CardContent>
+      {!showMoreDetails && moreDetails && <CardActions classes={{ root: classes.cardActions }}>
+        <Button size="medium" color="primary" variant="outlined" onClick={() => setShowMoreDetails(true)}>
+          Scopri di più
+        </Button>
+      </CardActions>
+      }
     </Card>
   )
 }
