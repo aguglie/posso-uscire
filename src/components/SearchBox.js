@@ -4,20 +4,33 @@ import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import React, { useState } from 'react'
-import province from '../lib/province'
+import regions from '../lib/italianRegions'
+import urlUtils from '../lib/urlUtils'
 import ActiveRulesList from './ActiveRulesList'
 
 export default function SearchBox() {
-  const [choosenProvince, setProvince] = useState()
+  const [choosenRegion, setRegion] = useState()
+
+  const onRegionChoosen = (region) => {
+    setRegion(region)
+    urlUtils.setHash(region?.nome || '')
+  }
+
+  urlUtils.hashConsumer((hash) => {
+    const foundRegion = regions.find(region => region.nome.toUpperCase().trim() === hash.toUpperCase().trim())
+    if (foundRegion) {
+      setRegion(foundRegion)
+    }
+  })
 
   return (
     <>
-      {!choosenProvince
+      {!choosenRegion
         ? <Box display="flex" justifyContent="center">
           <Autocomplete
             id="province"
-            onChange={(_, value) => setProvince(value)}
-            options={province}
+            onChange={(_, value) => onRegionChoosen(value)}
+            options={regions}
             getOptionLabel={(option) => option.nome}
             style={{ width: '80%', marginTop: 20 }}
             renderInput={(params) => <TextField {...params} label="Provincia" variant="outlined"/>}
@@ -25,18 +38,17 @@ export default function SearchBox() {
         </Box>
         : <Typography color="textPrimary" fontFamily="Roboto" >
           <Box textAlign="left" fontSize={15}>
-            <Link onClick={() => setProvince(null)}>
+            <Link onClick={() => onRegionChoosen(null)}>
               Cambia città
             </Link>
           </Box>
           <Box textAlign="center" fontSize="h4.fontSize">
-          📍 {choosenProvince.nome}
+          📍 {choosenRegion.nome}
           </Box>
         </Typography>
       }
 
-      { choosenProvince && <ActiveRulesList province={choosenProvince}/>}
-
+      { choosenRegion && <ActiveRulesList province={choosenRegion}/>}
     </>
   )
 }

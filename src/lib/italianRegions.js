@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* https://gist.github.com/stockmind/8bcbbf9ac41bc196401b96084ec8c5d3 */
-const province = [
+const italianRegions = [
   {
     'nome': 'Agrigento',
     'sigla': 'AG',
@@ -553,4 +553,4 @@ const province = [
   },
 ]
 
-export default province
+export default italianRegions
