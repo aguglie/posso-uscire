@@ -1,18 +1,23 @@
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import Box from '@material-ui/core/Box'
 import Header from './components/Header'
 import Disclaimer from './components/Disclaimer'
 import SearchBox from './components/SearchBox'
 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    marginTop: theme.spacing(5),
+  },
+}))
+
 export default function App() {
+  const classes = useStyles()
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Header />
-        <SearchBox/>
-        <Disclaimer />
-      </Box>
+    <Container maxWidth="sm" className={classes.container}>
+      <Header />
+      <SearchBox/>
+      <Disclaimer />
     </Container>
   )
 }
