@@ -11,5 +11,5 @@ le informazioni mostrate sono definite in `src/rules`, ogni file contiene una re
 Una volta effettuate le modifiche, si può testare il sito in locale lanciando
 ```
 npm install 
-npm test
+npm start
 ```
