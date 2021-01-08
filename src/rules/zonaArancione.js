@@ -1,4 +1,4 @@
-import { ALL_REGIONS } from './Constants'
+import { ALL_REGIONS, CALABRIA, EMILIA_ROMAGNA, LOMBARDIA, SICILIA, VENETO } from './Constants'
 
 const zonaArancione = {
   name: '🟧 Zona Arancione',
@@ -25,5 +25,11 @@ export default [
     from: '2021/01/09 00:00:00',
     to: '2021/01/10 23:59:59',
     regions: ALL_REGIONS,
+  },
+  {
+    ...zonaArancione,
+    from: '2021/01/11 00:00:00',
+    to: '2021/01/15 23:59:59',
+    regions: [LOMBARDIA, VENETO, EMILIA_ROMAGNA, CALABRIA, SICILIA],
   },
 ]
