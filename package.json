@@ -17,6 +17,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "clsx": "latest",
+    "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest",

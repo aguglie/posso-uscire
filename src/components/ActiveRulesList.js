@@ -98,7 +98,7 @@ export default function ActiveRulesList({ province }) {
         ? <Box textAlign="center" fontSize={20} color={'red'}>
             Nessun risultato trovato.
         </Box>
-        : activeRules.map(rule => <Rule key={province.nome + rule.from} rule={rule}/>)}
+        : activeRules.map(rule => <Rule key={`${province.nome}-${rule.from}-${rule.to}`} rule={rule}/>)}
     </Typography>
   )
 }
