@@ -16,6 +16,10 @@ const zonaArancione = {
       'en': '❌ Shopping malls are closed.',
     },
     {
+      'it': '🛏 Coprifuoco dalle 22.00 alle 05.00.',
+      'en': '🛏 Curfew from 10 PM to 5 AM.',
+    },
+    {
       'it': '📝 Serve l\'autocertificazione per gli spostamenti al di fuori del comune.',
       'en': '📝 Self-certification is needed to justify shifts across municipalities.',
     },
