@@ -7,9 +7,23 @@ import React, { useState } from 'react'
 import regions from '../lib/italianRegions'
 import urlUtils from '../lib/urlUtils'
 import ActiveRulesList from './ActiveRulesList'
+import { withLanguage } from './LanguageProvider'
+
+const i18n = {
+  CITY: {
+    'it': 'Provincia',
+    'en': 'City',
+  },
+  CHANGE_LANGUAGE: {
+    'it': 'Cambia provincia',
+    'en': 'Change city',
+  },
+}
 
 export default function SearchBox() {
   const [choosenRegion, setRegion] = useState()
+  const [language] = withLanguage()
+
 
   const onRegionChoosen = (region) => {
     setRegion(region)
@@ -35,13 +49,13 @@ export default function SearchBox() {
             options={regions}
             getOptionLabel={(option) => option.nome}
             style={{ width: '80%', marginTop: 20 }}
-            renderInput={(params) => <TextField {...params} label="Provincia" variant="outlined"/>}
+            renderInput={(params) => <TextField {...params} label={i18n.CITY[language]} variant="outlined"/>}
           />
         </Box>
         : <Typography color="textPrimary" fontFamily="Roboto" >
           <Box textAlign="left" fontSize={15}>
             <Link onClick={() => onRegionChoosen(null)}>
-              Cambia città
+              {i18n.CHANGE_LANGUAGE[language]}
             </Link>
           </Box>
           <Box textAlign="center" fontSize="h4.fontSize">

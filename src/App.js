@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import Container from '@material-ui/core/Container'
 import Header from './components/Header'
-import Disclaimer from './components/Disclaimer'
+import Footer from './components/Footer'
 import SearchBox from './components/SearchBox'
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +17,7 @@ export default function App() {
     <Container maxWidth="sm" className={classes.container}>
       <Header />
       <SearchBox/>
-      <Disclaimer />
+      <Footer />
     </Container>
   )
 }
