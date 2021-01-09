@@ -3,19 +3,52 @@ import { ALL_REGIONS, CALABRIA, EMILIA_ROMAGNA, LOMBARDIA, SICILIA, VENETO } fro
 const zonaArancione = {
   name: '🟧 Zona Arancione',
   details: [
-    '🚫 Bar e ristoranti chiusi tranne che per asporto.',
-    '🛍 Negozi aperti.',
-    '❌ Centri commerciali chiusi.',
-    "📝 Serve l'autocertificazione per gli spostamenti al di fuori del comune.",
-    '🌎 Puoi andare nella seconda casa ma solo se nella tua regione.',
-    '🚫 Non si possono superare i confini della regione.',
+    {
+      'it': '🚫 Bar, ristoranti chiusi tranne che per asporto.',
+      'en': '🚫 Bar and resturants open just for take-away service.',
+    },
+    {
+      'it': '🛍 Negozi aperti.',
+      'en': '🛍 Shops are open.',
+    },
+    {
+      'it': '❌ Centri commerciali chiusi.',
+      'en': '❌ Shopping malls are closed.',
+    },
+    {
+      'it': '📝 Serve l\'autocertificazione per gli spostamenti al di fuori del comune.',
+      'en': '📝 Self-certification is needed to justify shifts across municipalities.',
+    },
+    {
+      'it': '🌎 Puoi andare nella seconda casa ma solo se nella tua regione.',
+      'en': '🌎 You can travel to the second home just if it is in your same region.',
+    },
+    {
+      'it': '🚫 Non si possono superare i confini della regione.',
+      'en': '🚫 It is not allowed to cross the boundaries of the region.',
+    },
   ],
   moreDetails: [
-    '👭 Si può uscire dal comune per comprovate esigenze di lavoro, di studio, di salute o situazione di necessità.',
-    '🛒 Si può uscire dal comune per fruire di servizi altrimenti non disponibili o economicamente più convenienti.',
-    '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione ad esclusione delle seconde case fuori regione.',
-    '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',
-    '🏃 Consentito svolgere attività sportiva e motoria all\'aperto, senza uscire dal comune.',
+    {
+      'it': '👭 Si può uscire dal comune per comprovate esigenze di lavoro, di salute o situazione di necessità.',
+      'en': '👭 Shifts across municipalities are allowed for work requirements, health needs, and situations of need.',
+    },
+    {
+      'it': '🛒 Si può uscire dal comune per fruire di servizi altrimenti non disponibili o economicamente più convenienti.',
+      'en': '🛒 It is allowed to travel between different municipalities to access services which are not-available/more-expensive in your own municipality.',
+    },
+    {
+      'it': '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione ad esclusione delle seconde case fuori regione.',
+      'en': '🏚 The return to one\'s residence, domicile or home is allowed, with the exception of second homes outside the region.',
+    },
+    {
+      'it': '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',
+      'en': '⛪ It is allowed to access places of worship and religious functions.',
+    },
+    {
+      'it': '🏃 Consentito svolgere attività sportiva e motoria all\'aperto, senza uscire dal comune.',
+      'en': '🏃 It is allowed to carry out outdoor sports and motor activities, without crossing municipality boundaries.',
+    },
   ],
 }
 
