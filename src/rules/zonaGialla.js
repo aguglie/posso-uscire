@@ -16,15 +16,36 @@ import {
 } from './Constants'
 
 const commonDetails = [
-  '🍻 Bar e ristoranti aperti fino alle 18. Asporto fino alle 22.',
-  '🛍 Negozi e centri commerciali aperti.',
-  '🛏 Coprifuoco dalle 22.00 alle 05.00.',
-  '📝 Ci si può muovere liberamente, senza autocertificazione.',
+  {
+    'it': '🍻 Bar e ristoranti aperti fino alle 18. Asporto fino alle 22.',
+    'en': '🍻 Bar and resturants are open until 6 PM. Take-away available until 10 PM.',
+  },
+  {
+    'it': '🛍 Negozi e centri commerciali aperti.',
+    'en': '🛍 Shops and shopping malls are open.',
+  },
+  {
+    'it': '🛏 Coprifuoco dalle 22.00 alle 05.00.',
+    'en': '🛏 Curfew from 10 PM to 5 AM.',
+  },
+  {
+    'it': '📝 Ci si può muovere liberamente, senza autocertificazione.',
+    'en': '📝 It is allowed to have shifts without carrying the self-certification.',
+  },
 ]
 const moreDetails = [
-  '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione ad esclusione delle seconde case fuori regione.',
-  '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',
-  '🏃 Consentito svolgere attività sportiva e motoria all\'aperto.',
+  {
+    'it': '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione ad esclusione delle seconde case fuori regione.',
+    'en': '🏚 The return to one\'s residence, domicile or home is allowed, with the exception of second homes outside the region.',
+  },
+  {
+    'it': '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',
+    'en': '⛪ It is allowed to access places of worship and religious functions.',
+  },
+  {
+    'it': '🏃 Consentito svolgere attività sportiva e motoria all\'aperto.',
+    'en': '🏃 It is allowed to carry out outdoor sports and motor activities.',
+  },
 ]
 
 // eslint-disable-next-line no-unused-vars
@@ -32,7 +53,10 @@ const zonaGialla = {
   name: '🟨 Zona Gialla',
   details: [
     ...commonDetails,
-    '✅ Consentiti spostamenti in altre regioni gialle.',
+    {
+      'it': '✅ Consentiti spostamenti in altre regioni gialle.',
+      'en': '✅ Shifts to other yellow regions are allowed.',
+    },
   ],
   moreDetails,
 }
@@ -41,7 +65,10 @@ const zonaGiallaRafforzata = {
   name: '🟨 Zona Gialla Rafforzata',
   details: [
     ...commonDetails,
-    '🚫 Non si possono superare i confini della regione.',
+    {
+      'it': '🚫 Non si possono superare i confini della regione.',
+      'en': '🚫 Shifts towards other regions are not allowed.',
+    },
   ],
   moreDetails,
 }
