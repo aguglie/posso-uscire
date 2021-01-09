@@ -1,7 +1,10 @@
 import { ALL_REGIONS, CALABRIA, EMILIA_ROMAGNA, LOMBARDIA, SICILIA, VENETO } from './Constants'
 
 const zonaArancione = {
-  name: '🟧 Zona Arancione',
+  name: {
+    'it': '🟧 Zona Arancione',
+    'en': '🟧 Orange Zone',
+  },
   details: [
     {
       'it': '🚫 Bar, ristoranti chiusi tranne che per asporto.',

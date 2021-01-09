@@ -1,7 +1,10 @@
 import { ALL_REGIONS } from './Constants'
 
 const zonaRossa = {
-  name: '🟥 Zona Rossa',
+  name: {
+    'it': '🟥 Zona Rossa',
+    'en': '🟥 Red Zone',
+  },
   details: [
     {
       'it': '🚫 Bar, ristoranti chiusi tranne che per asporto.',

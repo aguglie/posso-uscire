@@ -50,7 +50,10 @@ const moreDetails = [
 
 // eslint-disable-next-line no-unused-vars
 const zonaGialla = {
-  name: '🟨 Zona Gialla',
+  name: {
+    'it': '🟨 Zona Gialla',
+    'en': '🟨 Yellow Zone',
+  },
   details: [
     ...commonDetails,
     {
@@ -62,7 +65,10 @@ const zonaGialla = {
 }
 
 const zonaGiallaRafforzata = {
-  name: '🟨 Zona Gialla Rafforzata',
+  name: {
+    'it': '🟨 Zona Gialla Rafforzata',
+    'en': '🟨 Strengthened Yellow Zone',
+  },
   details: [
     ...commonDetails,
     {
