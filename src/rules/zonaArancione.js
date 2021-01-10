@@ -15,8 +15,8 @@ const zonaArancione = {
       'en': '🛍 Shops are open.',
     },
     {
-      'it': '❌ Centri commerciali chiusi.',
-      'en': '❌ Shopping malls are closed.',
+      'it': '❌ Centri commerciali chiusi durante i festivi e prefestivi.',
+      'en': '❌ Shopping malls are closed on holidays and days before holidays.',
     },
     {
       'it': '🛏 Coprifuoco dalle 22.00 alle 05.00.',
