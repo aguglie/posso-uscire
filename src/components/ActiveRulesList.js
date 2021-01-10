@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { getActiveRules } from '../rules'
+import { withLanguage } from './LanguageProvider'
 
 const useStyles = makeStyles((theme) => ({
   copyrightBox: {
@@ -37,17 +38,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
+const i18n = {
+  FROM: {
+    'it': 'Da',
+    'en': 'From',
+  },
+  TO: {
+    'it': 'al',
+    'en': 'to',
+  },
+  MORE_INFO: {
+    'it': 'Scopri di più',
+    'en': 'More',
+  },
+  NO_RESULTS: {
+    'it': 'Nessun risultato trovato',
+    'en': 'Nothing was found',
+  },
+}
+
 function parseDate(date) {
   return new Date(date).toLocaleDateString()
 }
 
+function getLocalizedValue(elem) {
+  const [language] = withLanguage()
+  if (typeof elem === 'string') {
+    return elem
+  }
+  return elem[language]
+}
+
 function Rule({ rule }) {
   const [showMoreDetails, setShowMoreDetails] = useState(false)
+  const [language] = withLanguage()
   const classes = useStyles()
 
   const { from, to, details, moreDetails } = rule
 
-  const dateFromTo = [(from ? `Dal ${parseDate(from)}` : ''), (to ? `Al ${parseDate(to)}` : '')].join(' ')
+  const dateFromTo = [(from ? `${i18n.FROM[language]} ${parseDate(from)}` : ''), (to ? `${i18n.TO[language]} ${parseDate(to)}` : '')].join(' ')
 
   return (
     <Card className={classes.cardRoot} variant="outlined">
@@ -57,7 +86,7 @@ function Rule({ rule }) {
         </Typography>
         }
         {rule.name && <Typography variant="h5" component="h2">
-          {rule.name}
+          {getLocalizedValue(rule.name)}
         </Typography>
         }
 
@@ -67,7 +96,7 @@ function Rule({ rule }) {
               <ListItem button key={detail}>
                 <ListItemText
                   classes={{ primary: classes.rule }}
-                  primary={detail}
+                  primary={getLocalizedValue(detail)}
                 />
               </ListItem>)
             }
@@ -77,7 +106,7 @@ function Rule({ rule }) {
       </CardContent>
       {!showMoreDetails && moreDetails && <CardActions classes={{ root: classes.cardActions }}>
         <Button size="medium" color="primary" variant="outlined" onClick={() => setShowMoreDetails(true)}>
-          Scopri di più
+          {i18n.MORE_INFO[language]}
         </Button>
       </CardActions>
       }
@@ -92,11 +121,13 @@ Rule.propTypes = {
 export default function ActiveRulesList({ province }) {
   const classes = useStyles()
   const activeRules = getActiveRules(province)
+  const [language] = withLanguage()
+
   return (
     <Typography variant="body2" color="textPrimary" className={classes.copyrightBox} >
       {activeRules.length === 0
         ? <Box textAlign="center" fontSize={20} color={'red'}>
-            Nessun risultato trovato.
+          {i18n.NO_RESULTS[language]}
         </Box>
         : activeRules.map(rule => <Rule key={`${province.nome}-${rule.from}-${rule.to}`} rule={rule}/>)}
     </Typography>
