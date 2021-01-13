@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(1),
   },
+  changeLanguageBox: {
+    marginBottom: theme.spacing(1),
+  },
 }))
 
 const i18n = {
@@ -24,7 +27,7 @@ const i18n = {
 
 export default function Header() {
   const classes = useStyles()
-  const [language] = withLanguage()
+  const [language, setLanguage] = withLanguage()
 
   return (
     <>
@@ -34,10 +37,16 @@ export default function Header() {
         </Box>
       </Typography>
 
+      <Box textAlign="center" className={classes.changeLanguageBox}
+        onClick={() => setLanguage(language === 'it' ? 'en' : 'it')}>
+        {language === 'it' ? '🇩🇬 Switch to English' : '🇮🇹 Passa all\' Italiano'}
+      </Box>
+
       <Typography className={classes.subTitle} color="textPrimary">
         <Box textAlign="left" fontSize={20}>
           {i18n.INSERT_CITY[language]}
         </Box>
+
       </Typography>
     </>
   )

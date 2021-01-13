@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
   contributeBox: {
     marginTop: theme.spacing(0.7),
   },
-  changeLanguageBox: {
-    marginTop: theme.spacing(1),
-  },
   lastUpdateBox: {
     marginBottom: theme.spacing(1),
   },
@@ -45,11 +42,11 @@ const i18n = {
 
 export default function Footer() {
   const classes = useStyles()
-  const [language, setLanguage] = withLanguage()
+  const [language] = withLanguage()
 
   return (
     <Typography variant="body2" color="textSecondary" align="center" className={classes.copyrightBox}>
-      <Box className={classes.lastUpdateBox}>
+      <Box className={classes.lastUpdateBox} fontWeight="fontWeightBold">
         {i18n.LAST_UPDATE[language]} {new Date(buildTime).toLocaleDateString()}
       </Box>
 
@@ -65,11 +62,6 @@ export default function Footer() {
           {i18n.CONTRIBUTE[language]}
         </Link>
       </Box>
-
-      <Box className={classes.changeLanguageBox} onClick={() => setLanguage(language === 'it' ? 'en' : 'it')}>
-        {language === 'it' ? 'Switch to English 🇩🇬' : 'Passa all\' Italiano 🇮🇹'}
-      </Box>
-
     </Typography>
   )
 }
