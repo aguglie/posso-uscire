@@ -18,6 +18,7 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "clsx": "latest",
     "lodash": "^4.17.20",
+    "preval.macro": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest",
