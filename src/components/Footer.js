@@ -47,7 +47,8 @@ export default function Footer() {
   return (
     <Typography variant="body2" color="textSecondary" align="center" className={classes.copyrightBox}>
       <Box className={classes.lastUpdateBox} fontWeight="fontWeightBold">
-        {i18n.LAST_UPDATE[language]} {new Date(buildTime).toLocaleDateString()}
+        {i18n.LAST_UPDATE[language]}
+        {`${new Date(buildTime).toLocaleDateString()} ${new Date(buildTime).toLocaleTimeString()}`}
       </Box>
 
       <Box>
