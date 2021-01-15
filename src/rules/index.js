@@ -31,7 +31,7 @@ const sameRulesReducer = (rulesToOutput, currentRule, currentRuleIndex, rules) =
 }
 
 export function getActiveRules(selectedProvince) {
-  const ruleByZoneFilter = rule =>
+  const rulesBySelectionFilter = rule =>
     rule.regions === ALL_REGIONS
     || (rule.regions && rule.regions.includes(selectedProvince.regione))
     || (rule.cities && rule.cities.includes(selectedProvince.sigla))
@@ -39,7 +39,7 @@ export function getActiveRules(selectedProvince) {
   const now = Date.now()
   return allRules
     .filter(rule => !rule.to || new Date(rule.to) > now)
-    .filter(ruleByZoneFilter)
+    .filter(rulesBySelectionFilter)
     .sort((first, second) => new Date(first.from) - new Date(second.from))
     .reduce(sameRulesReducer, [])
 }
