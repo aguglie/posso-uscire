@@ -20,3 +20,6 @@ export const FRIULI_VENEZIA_GIULIA = 'Friuli-Venezia Giulia'
 export const BASILICATA = 'Basilicata'
 export const UMBRIA = 'Umbria'
 export const VALLE_D_AOSTA = "Valle d'Aosta"
+
+export const BOLZANO = 'BZ'
+export const TRENTO = 'TN'

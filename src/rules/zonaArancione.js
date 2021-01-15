@@ -1,4 +1,15 @@
-import { ALL_REGIONS, CALABRIA, EMILIA_ROMAGNA, LOMBARDIA, SICILIA, VENETO } from './Constants'
+import {
+  ABRUZZO,
+  ALL_REGIONS,
+  CALABRIA,
+  EMILIA_ROMAGNA, FRIULI_VENEZIA_GIULIA, LAZIO,
+  LIGURIA,
+  LOMBARDIA, MARCHE,
+  PIEMONTE, PUGLIA,
+  SICILIA, UMBRIA,
+  VALLE_D_AOSTA,
+  VENETO,
+} from './Constants'
 
 const zonaArancione = {
   name: {
@@ -7,8 +18,8 @@ const zonaArancione = {
   },
   details: [
     {
-      'it': '🚫 Bar, ristoranti chiusi tranne che per asporto.',
-      'en': '🚫 Bar and resturants open just for take-away service.',
+      'it': '🚫 Bar, ristoranti chiusi tranne che per asporto rispettivamente fino alle 18 e 22.',
+      'en': '🚫 Bar and resturants open just for take-away service until 6pm and 10pm respectively.',
     },
     {
       'it': '🛍 Negozi aperti.',
@@ -27,12 +38,12 @@ const zonaArancione = {
       'en': '📝 Self-certification is needed to justify shifts across municipalities.',
     },
     {
-      'it': '🌎 Puoi andare nella seconda casa ma solo se nella tua regione.',
-      'en': '🌎 You can travel to the second home just if it is in your same region.',
+      'it': '🌎 Puoi andare nella seconda casa ma solo se nel tuo comune.',
+      'en': '🌎 You can travel to the second home just if it is in your same town.',
     },
     {
-      'it': '🚫 Non si possono superare i confini della regione.',
-      'en': '🚫 It is not allowed to cross the boundaries of the region.',
+      'it': '⛔️ Non si possono superare i confini della regione salvo per esigenze lavorative, situazioni di necessità o motivi di salute.',
+      'en': '⛔️ It is not allowed to cross the boundaries of the region except for work needs, mandatory necessities or health reasons.',
     },
   ],
   moreDetails: [
@@ -71,5 +82,12 @@ export default [
     from: '2021/01/11 00:00:00',
     to: '2021/01/15 23:59:59',
     regions: [LOMBARDIA, VENETO, EMILIA_ROMAGNA, CALABRIA, SICILIA],
+  },
+  {
+    ...zonaArancione,
+    from: '2021/01/16 00:00:00',
+    to: '2021/02/15 23:59:59',
+    regions: [VALLE_D_AOSTA, PIEMONTE, LIGURIA, EMILIA_ROMAGNA, VENETO,
+      FRIULI_VENEZIA_GIULIA, LAZIO, MARCHE, UMBRIA, ABRUZZO, PUGLIA, CALABRIA],
   },
 ]
