@@ -30,6 +30,10 @@ const zonaArancione = {
       'en': '❌ Shopping malls are closed on holidays and days before holidays.',
     },
     {
+      'it': '👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.',
+      'en': '👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.',
+    },
+    {
       'it': '🛏 Coprifuoco dalle 22.00 alle 05.00.',
       'en': '🛏 Curfew from 10 PM to 5 AM.',
     },
@@ -80,12 +84,12 @@ export default [
   {
     ...zonaArancione,
     from: '2021/01/11 00:00:00',
-    to: '2021/01/15 23:59:59',
+    to: '2021/01/16 23:59:59',
     regions: [LOMBARDIA, VENETO, EMILIA_ROMAGNA, CALABRIA, SICILIA],
   },
   {
     ...zonaArancione,
-    from: '2021/01/16 00:00:00',
+    from: '2021/01/17 00:00:00',
     to: '2021/02/15 23:59:59',
     regions: [VALLE_D_AOSTA, PIEMONTE, LIGURIA, EMILIA_ROMAGNA, VENETO,
       FRIULI_VENEZIA_GIULIA, LAZIO, MARCHE, UMBRIA, ABRUZZO, PUGLIA, CALABRIA],

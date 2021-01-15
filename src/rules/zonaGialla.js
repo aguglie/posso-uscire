@@ -97,7 +97,7 @@ export default [
   {
     ...zonaGiallaRafforzata,
     from: '2021/01/11 00:00:00',
-    to: '2021/01/15 23:59:59',
+    to: '2021/01/16 23:59:59',
     regions: [
       PIEMONTE, MARCHE, TOSCANA, CAMPANIA, PUGLIA, TRENTINO_ALTO_ADIGE,
       SARDEGNA, MOLISE, ABRUZZO, LAZIO, LIGURIA, FRIULI_VENEZIA_GIULIA,
@@ -106,7 +106,7 @@ export default [
   },
   {
     ...zonaGiallaRafforzata,
-    from: '2021/01/16 00:00:00',
+    from: '2021/01/17 00:00:00',
     to: '2021/02/15 23:59:59',
     regions: [TOSCANA, SARDEGNA, MOLISE, CAMPANIA, BASILICATA],
     cities: [TRENTO],
