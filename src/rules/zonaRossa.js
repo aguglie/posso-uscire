@@ -15,10 +15,6 @@ const zonaRossa = {
       'en': '🛍 All the shops and markets are closed except for groceries and convinence stores.',
     },
     {
-      'it': '👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.',
-      'en': '👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.',
-    },
-    {
       'it': '🛏 Coprifuoco dalle 22.00 alle 05.00.',
       'en': '🛏 Curfew from 10 PM to 5 AM.',
     },
@@ -65,9 +61,27 @@ export default [
   },
   {
     ...zonaRossa,
-    from: '2021/01/16 00:00:00',
+    details: [{
+      'it': '👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.',
+      'en': '👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.',
+    },
+    ...zonaRossa.details,
+    ],
+    from: '2021/01/17 00:00:00',
     to: '2021/02/15 23:59:59',
-    regions: [LOMBARDIA, SICILIA],
+    regions: [LOMBARDIA],
     cities: [BOLZANO],
+  },
+  {
+    ...zonaRossa,
+    details: [{
+      'it': '🙅 Non è consentito fare visita ad amici e parenti.',
+      'en': '🙅 You cannot travel to friends or relatives.',
+    },
+    ...zonaRossa.details,
+    ],
+    from: '2021/01/17 00:00:00',
+    to: '2021/02/15 23:59:59',
+    regions: [SICILIA],
   },
 ]
