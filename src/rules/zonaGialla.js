@@ -17,8 +17,8 @@ import {
 
 const commonDetails = [
   {
-    'it': '🍻 Bar e ristoranti aperti fino alle 18. Asporto fino alle 22.',
-    'en': '🍻 Bar and resturants are open until 6 PM. Take-away available until 10 PM.',
+    'it': '🍻 Bar e ristoranti aperti fino alle 18. Asporto e consegna a domicilio fino alle 22.',
+    'en': '🍻 Bar and resturants are open until 6 PM. Take-away and home-delivery available until 10 PM.',
   },
   {
     'it': '🛍 Negozi e centri commerciali aperti.',

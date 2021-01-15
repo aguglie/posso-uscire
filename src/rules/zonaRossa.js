@@ -7,8 +7,8 @@ const zonaRossa = {
   },
   details: [
     {
-      'it': '🚫 Bar, ristoranti chiusi tranne che per asporto rispettivamente fino alle 18 e 22.',
-      'en': '🚫 Bar and resturants open just for take-away service until 6pm and 10pm respectively.',
+      'it': '🍣 Bar aperti per asporto fino alle 18. Ristoranti aperti per asporto fino alle 22. E\' sempre consentito il servizio di consegna a domicilio.',
+      'en': '🍣 Bars open for takeaway until 6pm. Restaurants open for takeaway until 10pm. The home-delivery service is always allowed.',
     },
     {
       'it': '🛍 Negozi e mercati chiusi ad esclusione di generi alimentati e prima necessità.',
@@ -33,8 +33,8 @@ const zonaRossa = {
       'en': '👭 Shifts across municipalities are allowed for work requirements, health needs, and situations of need.',
     },
     {
-      'it': '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione ad esclusione delle seconde case fuori regione.',
-      'en': '🏚 The return to one\'s residence, domicile or home is allowed, with the exception of second homes outside the region.',
+      'it': '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione.',
+      'en': '🏚 The return to one\'s residence, domicile or home is allowed.',
     },
     {
       'it': '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',
