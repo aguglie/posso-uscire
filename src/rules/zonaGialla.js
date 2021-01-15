@@ -12,7 +12,7 @@ import {
   PUGLIA,
   SARDEGNA,
   TOSCANA,
-  TRENTINO_ALTO_ADIGE, UMBRIA, VALLE_D_AOSTA,
+  TRENTINO_ALTO_ADIGE, TRENTO, UMBRIA, VALLE_D_AOSTA,
 } from './Constants'
 
 const commonDetails = [
@@ -29,8 +29,16 @@ const commonDetails = [
     'en': '🛏 Curfew from 10 PM to 5 AM.',
   },
   {
+    'it': '❇️ Musei aperti dal Lunedì al Venerdì.',
+    'en': '❇️  Museums open from Monday to Friday.',
+  },
+  {
     'it': '📝 Ci si può muovere liberamente, senza autocertificazione.',
     'en': '📝 It is allowed to have shifts without carrying the self-certification.',
+  },
+  {
+    'it': '⛔️ Non si possono superare i confini della regione salvo per esigenze lavorative, situazioni di necessità o motivi di salute.',
+    'en': '⛔️ It is not allowed to cross the boundaries of the region except for work needs, mandatory necessities or health reasons.',
   },
 ]
 const moreDetails = [
@@ -95,5 +103,12 @@ export default [
       SARDEGNA, MOLISE, ABRUZZO, LAZIO, LIGURIA, FRIULI_VENEZIA_GIULIA,
       BASILICATA, UMBRIA, VALLE_D_AOSTA,
     ],
+  },
+  {
+    ...zonaGiallaRafforzata,
+    from: '2021/01/16 00:00:00',
+    to: '2021/02/15 23:59:59',
+    regions: [TOSCANA, SARDEGNA, MOLISE, CAMPANIA, BASILICATA],
+    cities: [TRENTO],
   },
 ]

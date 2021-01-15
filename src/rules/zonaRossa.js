@@ -1,4 +1,4 @@
-import { ALL_REGIONS } from './Constants'
+import { ALL_REGIONS, BOLZANO, LOMBARDIA, SICILIA } from './Constants'
 
 const zonaRossa = {
   name: {
@@ -7,8 +7,8 @@ const zonaRossa = {
   },
   details: [
     {
-      'it': '🚫 Bar, ristoranti chiusi tranne che per asporto.',
-      'en': '🚫 Bar and resturants open just for take-away service.',
+      'it': '🚫 Bar, ristoranti chiusi tranne che per asporto rispettivamente fino alle 18 e 22.',
+      'en': '🚫 Bar and resturants open just for take-away service until 6pm and 10pm respectively.',
     },
     {
       'it': '🛍 Negozi e mercati chiusi ad esclusione di generi alimentati e prima necessità.',
@@ -62,5 +62,12 @@ export default [
     from: '2021/01/05 00:00:00',
     to: '2021/01/06 23:59:59',
     regions: ALL_REGIONS,
+  },
+  {
+    ...zonaRossa,
+    from: '2021/01/16 00:00:00',
+    to: '2021/02/15 23:59:59',
+    regions: [LOMBARDIA, SICILIA],
+    cities: [BOLZANO],
   },
 ]
