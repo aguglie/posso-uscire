@@ -5,7 +5,7 @@
 /dist
 /out
 /.next
-
+/site-worker
 
 /.pnp
 .pnp.js
