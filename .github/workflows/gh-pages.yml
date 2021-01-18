@@ -1,8 +1,8 @@
-name: github pages
+name: github pages next.js
 
 on:
   push:
-    branches: [ master ]
+    branches: [ next.js ]
 
 jobs:
   deploy:
@@ -14,12 +14,12 @@ jobs:
           node-version: '14.x'
 
       - run: npm install
-      - run: npm run lint
       - run: npm run build
+      - run: npm run export
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          cname: possouscire.casa
+          publish_dir: ./out
