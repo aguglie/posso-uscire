@@ -11,7 +11,7 @@ const zonaRossa = {
       'en': '🍣 Bars open for takeaway until 6pm. Restaurants open for takeaway until 10pm. The home-delivery service is always allowed.',
     },
     {
-      'it': '🛍 Negozi e mercati chiusi ad esclusione di generi alimentati e prima necessità.',
+      'it': '🛍 Negozi e mercati chiusi ad esclusione di generi alimentari e prima necessità.',
       'en': '🛍 All the shops and markets are closed except for groceries and convinence stores.',
     },
     {

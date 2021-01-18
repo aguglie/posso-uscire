@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const supportedLanguages = ['it', 'en']
-const defaultLanguage = 'en'
+const defaultLanguage = 'it'
 
 function getLocale() {
   if (window.navigator.languages) {
