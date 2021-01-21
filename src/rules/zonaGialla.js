@@ -33,8 +33,8 @@ const commonDetails = [
     'en': '❇️  Museums open from Monday to Friday.',
   },
   {
-    'it': '📝 Ci si può muovere liberamente, senza autocertificazione.',
-    'en': '📝 It is allowed to have shifts without carrying the self-certification.',
+    'it': '📝 Ci si può muovere liberamente, senza autocertificazione all\'interno della regione.',
+    'en': '📝 It is allowed to have shifts without carrying the self-certification inside your region.',
   },
   {
     'it': '⛔️ Non si possono superare i confini della regione salvo per esigenze lavorative, situazioni di necessità o motivi di salute.',
@@ -43,8 +43,8 @@ const commonDetails = [
 ]
 const moreDetails = [
   {
-    'it': '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione ad esclusione delle seconde case fuori regione.',
-    'en': '🏚 The return to one\'s residence, domicile or home is allowed, with the exception of second homes outside the region.',
+    'it': '🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.',
+    'en': '🏚 Always allowed to return to one\'s residence, domicile or home. You can go to the second home, even if outside the region if purchased before 14/01/2021.',
   },
   {
     'it': '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',

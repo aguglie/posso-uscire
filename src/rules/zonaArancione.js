@@ -42,8 +42,8 @@ const zonaArancione = {
       'en': '📝 Self-certification is needed to justify shifts across municipalities.',
     },
     {
-      'it': '🌎 Puoi andare nella seconda casa ma solo se nel tuo comune.',
-      'en': '🌎 You can travel to the second home just if it is in your same town.',
+      'it': '🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.',
+      'en': '🏚 Always allowed to return to one\'s residence, domicile or home. You can go to the second home, even if outside the region if purchased before 14/01/2021.',
     },
     {
       'it': '⛔️ Non si possono superare i confini della regione salvo per esigenze lavorative, situazioni di necessità o motivi di salute.',
@@ -58,10 +58,6 @@ const zonaArancione = {
     {
       'it': '🛒 Si può uscire dal comune per fruire di servizi altrimenti non disponibili o economicamente più convenienti.',
       'en': '🛒 It is allowed to travel between different municipalities to access services which are not-available/more-expensive in your own municipality.',
-    },
-    {
-      'it': '🏚 Consentito il rientro alla propria residenza, domicilio o abitazione.',
-      'en': '🏚 The return to one\'s residence, domicile or home is allowed.',
     },
     {
       'it': '⛪ Consentito l\' accesso ai luoghi di culto e funzioni religiose.',
