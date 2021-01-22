@@ -17,8 +17,8 @@ import {
 
 const commonDetails = [
   {
-    'it': '🍻 Bar e ristoranti aperti fino alle 18. Asporto e consegna a domicilio fino alle 22.',
-    'en': '🍻 Bar and resturants are open until 6 PM. Take-away and home-delivery available until 10 PM.',
+    'it': '🍻 Bar e ristoranti aperti fino alle 18. Ristoranti aperti per asporto fino alle 22. E\' sempre consentito il servizio di consegna a domicilio.',
+    'en': '🍻 Bars and restaurants open until 6pm. Restaurants open for takeaway until 10pm. Home delivery is always allowed.',
   },
   {
     'it': '🛍 Negozi e centri commerciali aperti.',
@@ -29,8 +29,8 @@ const commonDetails = [
     'en': '🛏 Curfew from 10 PM to 5 AM.',
   },
   {
-    'it': '❇️ Musei aperti dal Lunedì al Venerdì.',
-    'en': '❇️  Museums open from Monday to Friday.',
+    'it': '❇️ Musei aperti dal Lunedì al Venerdì. Biblioteche aperte. Altri luoghi della cultura chiusi.',
+    'en': '❇️ Museums open from Monday to Friday. Libraries are open. Other culture-related places are closed.',
   },
   {
     'it': '📝 Ci si può muovere liberamente, senza autocertificazione all\'interno della regione.',

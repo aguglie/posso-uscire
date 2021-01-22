@@ -67,6 +67,10 @@ const zonaArancione = {
       'it': '🏃 Consentito svolgere attività sportiva e motoria all\'aperto, senza uscire dal comune.',
       'en': '🏃 It is allowed to carry out outdoor sports and motor activities, without crossing municipality boundaries.',
     },
+    {
+      'it': '📚 Luoghi di cultura chiusi (musei compresi). Biblioteche aperte su prenotazione.',
+      'en': '📚 Culture-related places are closed. Libraries open by reservation.',
+    },
   ],
 }
 

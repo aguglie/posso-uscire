@@ -48,6 +48,10 @@ const zonaRossa = {
       'it': '✅ Aperte edicole, tabaccai, farmacie e parafarmacie.',
       'en': '✅ Newsstand, tobacconists, pharmacies, and parapharmacies are open.',
     },
+    {
+      'it': '📚 Luoghi di cultura chiusi (musei compresi). Biblioteche aperte su prenotazione.',
+      'en': '📚 Culture-related places are closed. Libraries open by reservation.',
+    },
   ],
 }
 
