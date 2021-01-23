@@ -73,8 +73,22 @@ export default [
       ...zonaRossa.details,
     ],
     from: '2021/01/17 00:00:00',
-    to: '2021/02/15 23:59:59',
+    to: '2021/02/23 23:59:59',
     regions: [LOMBARDIA],
+    cities: [BOLZANO],
+  },
+  {
+    ...zonaRossa,
+    details: [
+      {
+        'it': '👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.',
+        'en': '👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.',
+      },
+      ...zonaRossa.details,
+    ],
+    from: '2021/01/24 00:00:00',
+    to: '2021/02/15 23:59:59',
+    regions: [],
     cities: [BOLZANO],
   },
   {
