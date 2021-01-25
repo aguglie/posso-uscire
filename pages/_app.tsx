@@ -1,6 +1,6 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import React from 'react';
+import { AppProps } from "next/app";
+import Head from "next/head";
+import React from "react";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -34,7 +34,7 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <main>
-          <Component {...pageProps} />
+        <Component {...pageProps} />
       </main>
     </>
   );

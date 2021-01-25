@@ -1,6 +1,6 @@
-import React from 'react'
-import { makeStyles, Box, Typography } from '@material-ui/core'
-import { useLanguage } from './LanguageProvider'
+import React from "react";
+import { makeStyles, Box, Typography } from "@material-ui/core";
+import { useLanguage } from "./LanguageProvider";
 
 export const useStyles = makeStyles((theme) => ({
   subTitle: {
@@ -10,26 +10,26 @@ export const useStyles = makeStyles((theme) => ({
   changeLanguageBox: {
     marginBottom: theme.spacing(1),
   },
-}))
+}));
 
 const i18n = {
   MAY_I_EXIT: {
-    it: 'Posso uscire?',
-    en: 'Can I get out?',
+    it: "Posso uscire?",
+    en: "Can I get out?",
   },
   INSERT_CITY: {
-    it: 'Inserisci la tua provincia per conoscere le restrizioni.',
-    en: 'Enter your city to know the restrictions.',
+    it: "Inserisci la tua provincia per conoscere le restrizioni.",
+    en: "Enter your city to know the restrictions.",
   },
-}
+};
 
 export default function Header() {
-  const classes = useStyles()
-  const [language, setLanguage] = useLanguage()
+  const classes = useStyles();
+  const [language, setLanguage] = useLanguage();
 
   return (
     <>
-      <Typography component={'div'} gutterBottom={true}>
+      <Typography component={"div"} gutterBottom={true}>
         <Box
           textAlign="center"
           fontSize="h3.fontSize"
@@ -43,15 +43,19 @@ export default function Header() {
       <Box
         textAlign="center"
         className={classes.changeLanguageBox}
-        onClick={() => setLanguage(language === 'it' ? 'en' : 'it')}
+        onClick={() => setLanguage(language === "it" ? "en" : "it")}
       >
-        {language === 'it' ? '🇩🇬 Switch to English' : "🇮🇹 Passa all' Italiano"}
+        {language === "it" ? "🇩🇬 Switch to English" : "🇮🇹 Passa all' Italiano"}
       </Box>
-      <Typography component={'div'} className={classes.subTitle} color="textPrimary">
+      <Typography
+        component={"div"}
+        className={classes.subTitle}
+        color="textPrimary"
+      >
         <Box textAlign="left" fontSize={20}>
           {i18n.INSERT_CITY[language]}
         </Box>
       </Typography>
     </>
-  )
+  );
 }

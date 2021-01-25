@@ -9,12 +9,12 @@ import {
   ListItem,
   ListItemText,
   makeStyles,
-  Typography
-} from '@material-ui/core'
-import PropTypes from 'prop-types'
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { useLanguage } from './LanguageProvider'
+  Typography,
+} from "@material-ui/core";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
+import Link from "next/link";
+import { useLanguage } from "./LanguageProvider";
 
 export const useStyles = makeStyles((theme) => ({
   copyrightBox: {
@@ -36,64 +36,64 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: 17,
   },
   cardActions: {
-    justifyContent: 'center',
+    justifyContent: "center",
     marginBottom: 10,
   },
-}))
+}));
 
 const i18n = {
   FROM: {
-    it: 'Da',
-    en: 'From',
+    it: "Da",
+    en: "From",
   },
   TO: {
-    it: 'al',
-    en: 'to',
+    it: "al",
+    en: "to",
   },
   MORE_INFO: {
-    it: 'Scopri di più',
-    en: 'More',
+    it: "Scopri di più",
+    en: "More",
   },
   NO_RESULTS: {
-    it: 'Nessun risultato trovato',
-    en: 'Nothing was found',
+    it: "Nessun risultato trovato",
+    en: "Nothing was found",
   },
   CHANGE_PROVINCE: {
-    it: 'Cambia provincia',
-    en: 'Change city',
+    it: "Cambia provincia",
+    en: "Change city",
   },
-}
+};
 
 function parseDate(date) {
-  return new Date(date).toLocaleDateString()
+  return new Date(date).toLocaleDateString();
 }
 
 function getLocalizedValue(elem) {
-  const [language] = useLanguage()
-  if (typeof elem === 'string') {
-    return elem
+  const [language] = useLanguage();
+  if (typeof elem === "string") {
+    return elem;
   }
-  return elem[language]
+  return elem[language];
 }
 
 function Rule({ rule }) {
-  const [showMoreDetails, setShowMoreDetails] = useState(false)
-  const [language] = useLanguage()
-  const classes = useStyles()
+  const [showMoreDetails, setShowMoreDetails] = useState(false);
+  const [language] = useLanguage();
+  const classes = useStyles();
 
-  const { from, to, details, moreDetails } = rule
+  const { from, to, details, moreDetails } = rule;
 
   const dateFromTo = [
-    from ? `${i18n.FROM[language]} ${parseDate(from)}` : '',
-    to ? `${i18n.TO[language]} ${parseDate(to)}` : '',
-  ].join(' ')
+    from ? `${i18n.FROM[language]} ${parseDate(from)}` : "",
+    to ? `${i18n.TO[language]} ${parseDate(to)}` : "",
+  ].join(" ");
 
   return (
     <Card className={classes.cardRoot} variant="outlined">
       <CardContent>
         {dateFromTo && (
           <Typography
-            component={'div'}
+            component={"div"}
             className={classes.dateFromTo}
             color="textPrimary"
             gutterBottom
@@ -108,7 +108,11 @@ function Rule({ rule }) {
         )}
 
         {details && (
-          <Typography component={'div'} color="textPrimary" className={classes.rulesList}>
+          <Typography
+            component={"div"}
+            color="textPrimary"
+            className={classes.rulesList}
+          >
             <List component="nav" dense={true}>
               {[...details, ...(showMoreDetails ? moreDetails : [])].map(
                 (detail, index) => (
@@ -137,19 +141,18 @@ function Rule({ rule }) {
         </CardActions>
       )}
     </Card>
-  )
+  );
 }
 Rule.propTypes = {
   rule: PropTypes.object,
-}
-
+};
 
 export default function ActiveRulesList({ rules, province }) {
-  const classes = useStyles()
-  const [language] = useLanguage()
+  const classes = useStyles();
+  const [language] = useLanguage();
   return (
     <>
-      <Typography component={'div'} color="textPrimary">
+      <Typography component={"div"} color="textPrimary">
         <Box textAlign="left" fontSize={15}>
           <Link href="/">
             <MatLink href="/">{i18n.CHANGE_PROVINCE[language]}</MatLink>
@@ -160,13 +163,13 @@ export default function ActiveRulesList({ rules, province }) {
         </Box>
       </Typography>
       <Typography
-        component={'div'}
+        component={"div"}
         variant="body2"
         color="textPrimary"
         className={classes.copyrightBox}
       >
         {rules.length === 0 ? (
-          <Box textAlign="center" fontSize={20} color={'red'}>
+          <Box textAlign="center" fontSize={20} color={"red"}>
             {i18n.NO_RESULTS[language]}
           </Box>
         ) : (
@@ -179,9 +182,9 @@ export default function ActiveRulesList({ rules, province }) {
         )}
       </Typography>
     </>
-  )
+  );
 }
 ActiveRulesList.propTypes = {
-  rules:PropTypes.array,
+  rules: PropTypes.array,
   province: PropTypes.object,
-}
+};
