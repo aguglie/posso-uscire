@@ -3,6 +3,7 @@ import zonaArancione from './zonaArancione'
 import zonaGialla from './zonaGialla'
 import zonaRossa from './zonaRossa'
 import _ from 'lodash'
+import { Province } from '../lib/types'
 
 
 const allRules = [
@@ -30,7 +31,7 @@ const sameRulesReducer = (rulesToOutput, currentRule, currentRuleIndex, rules) =
   return rulesToOutput
 }
 
-export function getActiveRules(selectedProvince) {
+export function getActiveRules(selectedProvince: Province) {
   const rulesBySelectionFilter = rule =>
     rule.regions === ALL_REGIONS
     || (rule.regions && rule.regions.includes(selectedProvince.regione))
@@ -38,8 +39,8 @@ export function getActiveRules(selectedProvince) {
 
   const now = Date.now()
   return allRules
-    .filter(rule => !rule.to || new Date(rule.to) > now)
+    .filter(rule => !rule.to || new Date(rule.to).getTime() > now)
     .filter(rulesBySelectionFilter)
-    .sort((first, second) => new Date(first.from) - new Date(second.from))
+    .sort((first, second) => new Date(first.from).getTime() - new Date(second.from).getTime())
     .reduce(sameRulesReducer, [])
 }

@@ -1,6 +1,9 @@
 /* eslint-disable */
+
+import { Province } from "./types"
+
 /* https://gist.github.com/stockmind/8bcbbf9ac41bc196401b96084ec8c5d3 */
-const italianRegions = [
+const italianRegions: Province[] = [
   {
     'nome': 'Agrigento',
     'sigla': 'AG',
@@ -72,7 +75,7 @@ const italianRegions = [
     'regione': 'Emilia-Romagna',
   },
   {
-    'nome': 'Bolzano/Bozen',
+    'nome': 'Bolzano-Bozen',
     'sigla': 'BZ',
     'regione': 'Trentino-Alto Adige/Südtirol',
   },

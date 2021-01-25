@@ -1,16 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
-import Link from '@material-ui/core/Link'
+import { makeStyles, Typography, Box, Link } from '@material-ui/core'
 import React from 'react'
-import { withLanguage } from './LanguageProvider'
-import preval from 'preval.macro'
+import { useLanguage } from './LanguageProvider'
 
-const buildTime = preval `module.exports = Date.now();`
 
-const useStyles = makeStyles((theme) => ({
+export const useFooterStyles = makeStyles((theme) => ({
   copyrightBox: {
-    marginTop: theme.spacing(10),
+    marginTop: `${theme.spacing(10)}px!important`,
     marginBottom: theme.spacing(5),
   },
   contributeBox: {
@@ -40,12 +35,12 @@ const i18n = {
   },
 }
 
-export default function Footer() {
-  const classes = useStyles()
-  const [language] = withLanguage()
+export default function Footer({buildTime}) {
+  const classes = useFooterStyles()
+  const [language] = useLanguage()
 
   return (
-    <Typography variant="body2" color="textSecondary" align="center" className={classes.copyrightBox}>
+    <Typography className={classes.copyrightBox} component={'div'} variant="body2" color="textSecondary" align="center">
       <Box className={classes.lastUpdateBox} fontWeight="fontWeightBold">
         {i18n.LAST_UPDATE[language]}
         {`${new Date(buildTime).toLocaleDateString()} ${new Date(buildTime).toLocaleTimeString()}`}
