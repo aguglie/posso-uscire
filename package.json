@@ -11,7 +11,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "sitemap": "node scripts/sitemap.js > ./out/sitemap.xml && echo \"Sitemap generated\""
   },
   "dependencies": {
     "@material-ui/core": "latest",
