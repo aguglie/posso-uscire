@@ -9,7 +9,7 @@
     "export": "next export",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "sitemap": "node scripts/sitemap.js > ./out/sitemap.xml && echo \"Sitemap generated\""
