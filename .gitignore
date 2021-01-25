@@ -2,6 +2,11 @@
 
 # dependencies
 /node_modules
+/dist
+/out
+/.next
+/site-worker
+
 /.pnp
 .pnp.js
 
