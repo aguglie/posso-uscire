@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import { Province } from "./types"
+import removeAccents from 'remove-accents'
 
 /* https://gist.github.com/stockmind/8bcbbf9ac41bc196401b96084ec8c5d3 */
 const italianRegions: Province[] = [
@@ -554,6 +555,13 @@ const italianRegions: Province[] = [
     'sigla': 'VT',
     'regione': 'Lazio',
   },
-]
+].map(it => ({
+  ...it,
+  urlName: prettify(it.nome)
+}))
+
+function prettify(string) {
+  return removeAccents(string.trim()).replace(/ +/g, '-')
+}
 
 export default italianRegions

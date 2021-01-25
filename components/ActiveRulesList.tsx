@@ -1,7 +1,20 @@
-import {Box, Button, Link as MatLink, Card, CardActions, CardContent, List, ListItem, ListItemText, makeStyles, Typography} from '@material-ui/core';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useLanguage } from './LanguageProvider';
+import {
+  Box,
+  Button,
+  Link as MatLink,
+  Card,
+  CardActions,
+  CardContent,
+  List,
+  ListItem,
+  ListItemText,
+  makeStyles,
+  Typography
+} from '@material-ui/core'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { useLanguage } from './LanguageProvider'
 
 export const useStyles = makeStyles((theme) => ({
   copyrightBox: {
@@ -26,7 +39,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     marginBottom: 10,
   },
-}));
+}))
 
 const i18n = {
   FROM: {
@@ -49,31 +62,31 @@ const i18n = {
     it: 'Cambia provincia',
     en: 'Change city',
   },
-};
+}
 
 function parseDate(date) {
-  return new Date(date).toLocaleDateString();
+  return new Date(date).toLocaleDateString()
 }
 
 function getLocalizedValue(elem) {
-  const [language] = useLanguage();
+  const [language] = useLanguage()
   if (typeof elem === 'string') {
-    return elem;
+    return elem
   }
-  return elem[language];
+  return elem[language]
 }
 
 function Rule({ rule }) {
-  const [showMoreDetails, setShowMoreDetails] = useState(false);
-  const [language] = useLanguage();
-  const classes = useStyles();
+  const [showMoreDetails, setShowMoreDetails] = useState(false)
+  const [language] = useLanguage()
+  const classes = useStyles()
 
-  const { from, to, details, moreDetails } = rule;
+  const { from, to, details, moreDetails } = rule
 
   const dateFromTo = [
     from ? `${i18n.FROM[language]} ${parseDate(from)}` : '',
     to ? `${i18n.TO[language]} ${parseDate(to)}` : '',
-  ].join(' ');
+  ].join(' ')
 
   return (
     <Card className={classes.cardRoot} variant="outlined">
@@ -95,7 +108,7 @@ function Rule({ rule }) {
         )}
 
         {details && (
-          <Typography  component={'div'}  color="textPrimary" className={classes.rulesList}>
+          <Typography component={'div'} color="textPrimary" className={classes.rulesList}>
             <List component="nav" dense={true}>
               {[...details, ...(showMoreDetails ? moreDetails : [])].map(
                 (detail, index) => (
@@ -124,12 +137,16 @@ function Rule({ rule }) {
         </CardActions>
       )}
     </Card>
-  );
+  )
+}
+Rule.propTypes = {
+  rule: PropTypes.object,
 }
 
+
 export default function ActiveRulesList({ rules, province }) {
-  const classes = useStyles();
-  const [language] = useLanguage();
+  const classes = useStyles()
+  const [language] = useLanguage()
   return (
     <>
       <Typography component={'div'} color="textPrimary">
@@ -162,5 +179,9 @@ export default function ActiveRulesList({ rules, province }) {
         )}
       </Typography>
     </>
-  );
+  )
+}
+ActiveRulesList.propTypes = {
+  rules:PropTypes.array,
+  province: PropTypes.object,
 }

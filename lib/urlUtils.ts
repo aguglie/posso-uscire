@@ -1,24 +1,10 @@
 import { useEffect } from 'react'
-import removeAccents from 'remove-accents'
 
-function prettify(string) {
-  return removeAccents(string.trim()).replace(/ +/g, '-')
-}
-
-function setHash(hash) {
-  const encodedHash = `#${encodeURI(prettify(hash))}`
-  if (history.pushState) {
-    history.pushState(null, null, encodedHash)
-  } else {
-    location.hash = encodedHash
-  }
-}
-
-function getHash() {
+function getHash() : string {
   return decodeURI(window.location.hash.substr(1))
 }
 
-function hashConsumer(callable) {
+function hashConsumer(callable: (city: string) => void): void {
   return useEffect(() => {
     const hash = getHash()
     if (hash) {
@@ -27,4 +13,4 @@ function hashConsumer(callable) {
   }, [])
 }
 
-export default { setHash, hashConsumer, prettify }
+export default { hashConsumer }

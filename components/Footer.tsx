@@ -1,6 +1,7 @@
-import { makeStyles, Typography, Box, Link } from '@material-ui/core'
+import { Box, Link, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
 import { useLanguage } from './LanguageProvider'
+import PropTypes from 'prop-types'
 
 
 export const useFooterStyles = makeStyles((theme) => ({
@@ -60,4 +61,7 @@ export default function Footer({buildTime}) {
       </Box>
     </Typography>
   )
+}
+Footer.propTypes = {
+  buildTime: PropTypes.number,
 }

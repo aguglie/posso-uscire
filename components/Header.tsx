@@ -1,6 +1,6 @@
-import React from 'react';
-import { makeStyles, Box, Typography } from '@material-ui/core';
-import { useLanguage } from './LanguageProvider';
+import React from 'react'
+import { makeStyles, Box, Typography } from '@material-ui/core'
+import { useLanguage } from './LanguageProvider'
 
 export const useStyles = makeStyles((theme) => ({
   subTitle: {
@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
   changeLanguageBox: {
     marginBottom: theme.spacing(1),
   },
-}));
+}))
 
 const i18n = {
   MAY_I_EXIT: {
@@ -21,11 +21,11 @@ const i18n = {
     it: 'Inserisci la tua provincia per conoscere le restrizioni.',
     en: 'Enter your city to know the restrictions.',
   },
-};
+}
 
 export default function Header() {
-  const classes = useStyles();
-  const [language, setLanguage] = useLanguage();
+  const classes = useStyles()
+  const [language, setLanguage] = useLanguage()
 
   return (
     <>
@@ -53,5 +53,5 @@ export default function Header() {
         </Box>
       </Typography>
     </>
-  );
+  )
 }

@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, ReactElement, useContext, useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
 const supportedLanguages = ['it', 'en']
 const defaultLanguage = 'it'
@@ -10,7 +11,7 @@ function getLocale() {
   return (window.navigator as any).userLanguage || window.navigator.language
 }
 
-export function getLanguage() {
+export function getLanguage(): string {
   const locale = getLocale()
   const language = locale.substr(0, 2)
 
@@ -22,10 +23,10 @@ export function getLanguage() {
 
 const LanguageContext = createContext<[string, (lang: string) => void]>([defaultLanguage, () => null])
 
-export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(defaultLanguage);
+export function LanguageProvider({ children }): ReactElement {
+  const [language, setLanguage] = useState(defaultLanguage)
   useEffect(() => {
-    setLanguage(getLanguage());
+    setLanguage(getLanguage())
   }, [])
   return (
     <LanguageContext.Provider value={[language, setLanguage]}>
@@ -33,7 +34,9 @@ export function LanguageProvider({ children }) {
     </LanguageContext.Provider>
   )
 }
-
+LanguageProvider.propTypes = {
+  children: PropTypes.element,
+}
 
 export function useLanguage() {
   return useContext(LanguageContext);
