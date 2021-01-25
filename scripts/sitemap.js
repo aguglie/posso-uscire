@@ -19,16 +19,7 @@ const formatted = (sitemap) => prettier.format(sitemap, { parser: "html" });
   const pagesSitemap = pages
     .map((it) => it.replace(/^\.\/out(.+)index\.html/, "$1"))
     .map(
-      (it) =>
-        "          <url>\n" +
-        "            <loc>" +
-        domain +
-        it +
-        "</loc>\n" +
-        "            <lastmod>" +
-        now +
-        "</lastmod>\n" +
-        "          </url>"
+      (it) => `<url><loc>${domain}${it}</loc><lastmod>${now}</lastmod></url>`
     )
     .join("\n");
 
