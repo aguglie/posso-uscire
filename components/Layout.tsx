@@ -18,18 +18,11 @@ export const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Layout({ children, buildTime }) {
-  const classes = useStyles();
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <LanguageProvider>
-        <Container maxWidth="sm" className={classes.container}>
-          <Header />
-          {children}
-          <Footer buildTime={buildTime} />
-        </Container>
-      </LanguageProvider>
-    </ThemeProvider>
+    <>
+      {children}
+      <Footer buildTime={buildTime} />
+    </>
   );
 }
 Layout.propTypes = {

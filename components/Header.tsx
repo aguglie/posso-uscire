@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, Box, Typography } from "@material-ui/core";
 import { useLanguage } from "./LanguageProvider";
+import PropTypes from "prop-types";
 
 export const useStyles = makeStyles((theme) => ({
   subTitle: {
@@ -17,15 +18,24 @@ const i18n = {
     it: "Posso uscire?",
     en: "Can I get out?",
   },
+  MAY_I_EXIT_FROM: {
+    it: "Posso uscire da ",
+    en: "Can I get out from ",
+  },
   INSERT_CITY: {
-    it: "Inserisci la tua provincia per conoscere le restrizioni.",
-    en: "Enter your city to know the restrictions.",
+    it:
+      "Inserisci la tua provincia per conoscere le restrizioni COVID19 attive.",
+    en: "Enter your city to know the COVID19 restrictions.",
   },
 };
 
-export default function Header() {
+export default function Header({ province }) {
   const classes = useStyles();
   const [language, setLanguage] = useLanguage();
+
+  const title = province
+    ? i18n.MAY_I_EXIT_FROM[language] + province.nome + "?"
+    : i18n.MAY_I_EXIT[language];
 
   return (
     <>
@@ -36,7 +46,7 @@ export default function Header() {
           fontFamily="Roboto"
           m={1}
         >
-          {i18n.MAY_I_EXIT[language]}
+          {title}
         </Box>
       </Typography>
 
@@ -59,3 +69,6 @@ export default function Header() {
     </>
   );
 }
+Header.propTypes = {
+  province: PropTypes.any,
+};

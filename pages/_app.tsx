@@ -1,8 +1,22 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
+import { LanguageProvider } from "../components/LanguageProvider";
+import { Container, CssBaseline, ThemeProvider } from "@material-ui/core";
+import theme from "../components/theme";
+import { useStyles } from "../components/Layout";
+import Header from "../components/Header";
+
+function makeTitle(province) {
+  if (!province) {
+    return "Posso uscire di casa?";
+  }
+  return "Posso uscire da " + province.nome + "?";
+}
 
 function App({ Component, pageProps }: AppProps) {
+  const classes = useStyles();
+  const pageTitle = makeTitle(pageProps?.province);
   return (
     <>
       <Head>
@@ -27,14 +41,22 @@ function App({ Component, pageProps }: AppProps) {
 
         <link rel="manifest" href="/manifest.json" />
 
-        <title>Posso uscire di casa?</title>
+        <title>{pageTitle}</title>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
       <main>
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <LanguageProvider>
+            <Container maxWidth="sm" className={classes.container}>
+              <Header province={pageProps.province} />
+              <Component {...pageProps} />
+            </Container>
+          </LanguageProvider>
+        </ThemeProvider>
       </main>
     </>
   );
