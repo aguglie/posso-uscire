@@ -1,6 +1,7 @@
 import {
   ABRUZZO,
   ALL_REGIONS,
+  BOLZANO,
   CALABRIA,
   EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
@@ -134,7 +135,7 @@ export default [
   {
     ...zonaArancione,
     from: "2021/01/24 00:00:00",
-    to: "2021/02/15 23:59:59",
+    to: "2021/01/31 23:59:59",
     regions: [
       VALLE_D_AOSTA,
       PIEMONTE,
@@ -151,5 +152,12 @@ export default [
       LOMBARDIA,
       SARDEGNA,
     ],
+  },
+  {
+    ...zonaArancione,
+    from: "2021/02/01 00:00:00",
+    to: "2021/02/15 23:59:59",
+    regions: [PUGLIA, SARDEGNA, SICILIA, UMBRIA],
+    cities: [BOLZANO],
   },
 ];
