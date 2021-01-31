@@ -30,8 +30,12 @@ const commonDetails = [
       "🍻 Bars and restaurants open until 6pm. Restaurants open for takeaway until 10pm. Home delivery is always allowed.",
   },
   {
-    it: "🛍 Negozi e centri commerciali aperti.",
-    en: "🛍 Shops and shopping malls are open.",
+    it: "🛍 Negozi aperti.",
+    en: "🛍 Shops are open.",
+  },
+  {
+    it: "❌ Centri commerciali chiusi durante i festivi e prefestivi.",
+    en: "❌ Shopping malls are closed on holidays and days before holidays.",
   },
   {
     it: "🛏 Coprifuoco dalle 22.00 alle 05.00.",
