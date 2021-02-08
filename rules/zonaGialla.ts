@@ -171,6 +171,7 @@ export default [
       MOLISE,
       CAMPANIA,
       BASILICATA,
+      SARDEGNA,
     ],
     cities: [TRENTO],
   },

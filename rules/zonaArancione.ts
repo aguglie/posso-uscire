@@ -157,7 +157,7 @@ export default [
     ...zonaArancione,
     from: "2021/02/01 00:00:00",
     to: "2021/02/15 23:59:59",
-    regions: [PUGLIA, SARDEGNA, SICILIA, UMBRIA],
+    regions: [PUGLIA, SICILIA, UMBRIA],
     cities: [BOLZANO],
   },
 ];
