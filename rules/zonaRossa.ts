@@ -1,4 +1,4 @@
-import { SICILIA } from "./Constants";
+import { BOLZANO } from "./Constants";
 
 const zonaRossa = {
   name: {
@@ -80,8 +80,9 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    from: "2021/01/17 00:00:00",
-    to: "2021/01/31 23:59:59",
-    regions: [SICILIA],
+    from: "2021/02/15 00:00:00",
+    to: "2021/02/28 23:59:59",
+    regions: [],
+    cities: [BOLZANO],
   },
 ];

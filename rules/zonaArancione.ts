@@ -3,7 +3,7 @@ import {
   LIGURIA,
   SICILIA,
   TOSCANA,
-  TRENTINO_ALTO_ADIGE,
+  TRENTO,
   UMBRIA,
 } from "./Constants";
 
@@ -94,6 +94,7 @@ export default [
     ...zonaArancione,
     from: "2021/02/15 00:00:00",
     to: "2021/02/20 23:59:59",
-    regions: [LIGURIA, TOSCANA, UMBRIA, ABRUZZO, TRENTINO_ALTO_ADIGE, SICILIA],
+    regions: [LIGURIA, TOSCANA, UMBRIA, ABRUZZO, SICILIA],
+    cities: [TRENTO],
   },
 ];
