@@ -1,4 +1,4 @@
-import { ALL_REGIONS, BOLZANO, LOMBARDIA, SICILIA } from "./Constants";
+import { SICILIA } from "./Constants";
 
 const zonaRossa = {
   name: {
@@ -6,6 +6,12 @@ const zonaRossa = {
     en: "🟥 Red Zone",
   },
   details: [
+    {
+      it:
+        "👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
+      en:
+        "👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.",
+    },
     {
       it:
         "🍣 Bar aperti per asporto fino alle 18. Ristoranti aperti per asporto fino alle 22. E' sempre consentito il servizio di consegna a domicilio.",
@@ -74,52 +80,6 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    name: "🟥 Epifania",
-    from: "2021/01/05 00:00:00",
-    to: "2021/01/06 23:59:59",
-    regions: ALL_REGIONS,
-  },
-  {
-    ...zonaRossa,
-    details: [
-      {
-        it:
-          "👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
-        en:
-          "👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.",
-      },
-      ...zonaRossa.details,
-    ],
-    from: "2021/01/17 00:00:00",
-    to: "2021/01/23 23:59:59",
-    regions: [LOMBARDIA],
-    cities: [BOLZANO],
-  },
-  {
-    ...zonaRossa,
-    details: [
-      {
-        it:
-          "👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
-        en:
-          "👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.",
-      },
-      ...zonaRossa.details,
-    ],
-    from: "2021/01/24 00:00:00",
-    to: "2021/01/31 23:59:59",
-    regions: [],
-    cities: [BOLZANO],
-  },
-  {
-    ...zonaRossa,
-    details: [
-      {
-        it: "🙅 Non è consentito fare visita ad amici e parenti.",
-        en: "🙅 You cannot travel to friends or relatives.",
-      },
-      ...zonaRossa.details,
-    ],
     from: "2021/01/17 00:00:00",
     to: "2021/01/31 23:59:59",
     regions: [SICILIA],
