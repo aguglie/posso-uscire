@@ -105,7 +105,7 @@ export default [
   {
     ...zonaGiallaRafforzata,
     from: "2021/02/01 00:00:00",
-    to: "2021/02/15 23:59:59",
+    to: "2021/02/20 23:59:59",
     regions: [
       VALLE_D_AOSTA,
       PIEMONTE,
@@ -117,6 +117,24 @@ export default [
       LAZIO,
       MOLISE,
       CAMPANIA,
+      PUGLIA,
+      BASILICATA,
+      CALABRIA,
+      SARDEGNA,
+    ],
+  },
+  {
+    ...zonaGiallaRafforzata,
+    from: "2021/02/21 00:00:00",
+    to: "2021/02/28 23:59:59",
+    regions: [
+      VALLE_D_AOSTA,
+      PIEMONTE,
+      LOMBARDIA,
+      VENETO,
+      FRIULI_VENEZIA_GIULIA,
+      MARCHE,
+      LAZIO,
       PUGLIA,
       BASILICATA,
       CALABRIA,

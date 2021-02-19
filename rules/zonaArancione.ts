@@ -1,6 +1,9 @@
 import {
   ABRUZZO,
+  CAMPANIA,
+  EMILIA_ROMAGNA,
   LIGURIA,
+  MOLISE,
   SICILIA,
   TOSCANA,
   TRENTO,
@@ -95,6 +98,22 @@ export default [
     from: "2021/02/15 00:00:00",
     to: "2021/02/20 23:59:59",
     regions: [LIGURIA, TOSCANA, UMBRIA, ABRUZZO, SICILIA],
+    cities: [TRENTO],
+  },
+  {
+    ...zonaArancione,
+    from: "2021/02/21 00:00:00",
+    to: "2021/02/28 23:59:59",
+    regions: [
+      LIGURIA,
+      TOSCANA,
+      UMBRIA,
+      ABRUZZO,
+      SICILIA,
+      CAMPANIA,
+      EMILIA_ROMAGNA,
+      MOLISE,
+    ],
     cities: [TRENTO],
   },
 ];
