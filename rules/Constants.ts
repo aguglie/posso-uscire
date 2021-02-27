@@ -23,3 +23,10 @@ export const VALLE_D_AOSTA = "Valle d'Aosta";
 
 export const BOLZANO = "BZ";
 export const TRENTO = "TN";
+export const BOLOGNA = "BO";
+export const RAVENNA = "RA";
+export const SIENA = "SI";
+export const PISTOIA = "PT";
+export const BERGAMO = "BG";
+export const BRESCIA = "BS";
+export const FROSINONE = "FR";

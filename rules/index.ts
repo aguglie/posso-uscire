@@ -58,14 +58,16 @@ const sameRulesReducer = (
 };
 
 export function getActiveRules(selectedProvince: Province) {
+  const now = Date.now();
+  const activeRulesFilter = (rule) =>
+    !rule?.to || new Date(rule?.to).getTime() > now;
   const rulesBySelectionFilter = (rule) =>
     rule.regions === ALL_REGIONS ||
     (rule.regions && rule.regions.includes(selectedProvince.regione)) ||
     (rule.cities && rule.cities.includes(selectedProvince.sigla));
 
-  const now = Date.now();
   return allRules
-    .filter((rule) => !rule.to || new Date(rule.to).getTime() > now)
+    .filter(activeRulesFilter)
     .filter(rulesBySelectionFilter)
     .sort(
       (first, second) =>
