@@ -153,7 +153,6 @@ export default [
       LAZIO,
       PUGLIA,
       CALABRIA,
-      SARDEGNA,
       LIGURIA,
     ],
   },
