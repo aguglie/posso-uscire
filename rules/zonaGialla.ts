@@ -151,7 +151,6 @@ export default [
       FRIULI_VENEZIA_GIULIA,
       LAZIO,
       PUGLIA,
-      BASILICATA,
       CALABRIA,
       SARDEGNA,
     ],

@@ -131,7 +131,6 @@ export default [
       SICILIA,
       CAMPANIA,
       EMILIA_ROMAGNA,
-      MOLISE,
       LOMBARDIA,
       PIEMONTE,
       MARCHE,
