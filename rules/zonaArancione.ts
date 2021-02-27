@@ -124,7 +124,6 @@ export default [
     from: "2021/03/01 00:00:00",
     to: "2021/04/06 23:59:59",
     regions: [
-      LIGURIA,
       TOSCANA,
       UMBRIA,
       ABRUZZO,

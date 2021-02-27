@@ -5,6 +5,7 @@ import {
   EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
   LAZIO,
+  LIGURIA,
   LOMBARDIA,
   MARCHE,
   MOLISE,
@@ -153,6 +154,7 @@ export default [
       PUGLIA,
       CALABRIA,
       SARDEGNA,
+      LIGURIA,
     ],
   },
 ];
