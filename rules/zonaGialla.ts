@@ -141,4 +141,19 @@ export default [
       SARDEGNA,
     ],
   },
+  {
+    ...zonaGiallaRafforzata,
+    from: "2021/03/01 00:00:00",
+    to: "2021/04/06 23:59:59",
+    regions: [
+      VALLE_D_AOSTA,
+      VENETO,
+      FRIULI_VENEZIA_GIULIA,
+      LAZIO,
+      PUGLIA,
+      BASILICATA,
+      CALABRIA,
+      SARDEGNA,
+    ],
+  },
 ];
