@@ -1,5 +1,6 @@
 import {
   ABRUZZO,
+  BOLZANO,
   CAMPANIA,
   EMILIA_ROMAGNA,
   LIGURIA,
@@ -134,6 +135,6 @@ export default [
       PIEMONTE,
       MARCHE,
     ],
-    cities: [TRENTO],
+    cities: [TRENTO, BOLZANO],
   },
 ];
