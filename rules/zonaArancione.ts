@@ -21,9 +21,9 @@ const zonaArancione = {
   details: [
     {
       it:
-        "🍣 Bar aperti per asporto fino alle 18. Ristoranti aperti per asporto fino alle 22. E' sempre consentito il servizio di consegna a domicilio.",
+        "🍣 Bar aperti per solo asporto fino alle 18. Ristoranti aperti per solo asporto fino alle 22. E' sempre consentito il servizio di consegna a domicilio.",
       en:
-        "🍣 Bars open for takeaway until 6pm. Restaurants open for takeaway until 10pm. The home-delivery service is always allowed.",
+        "🍣 Bars open only for takeaway until 6pm. Restaurants open only for takeaway until 10pm. The home-delivery service is always allowed.",
     },
     {
       it: "🛍 Negozi aperti.",
