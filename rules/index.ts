@@ -2,10 +2,11 @@ import { ALL_REGIONS } from "./Constants";
 import zonaArancione from "./zonaArancione";
 import zonaGialla from "./zonaGialla";
 import zonaRossa from "./zonaRossa";
+import zonaBianca from "./zonaBianca";
 import _ from "lodash";
 import { Province } from "../lib/types";
 
-const allRules = [...zonaGialla, ...zonaArancione, ...zonaRossa];
+const allRules = [...zonaGialla, ...zonaArancione, ...zonaRossa, ...zonaBianca];
 
 const rulesComparator = (thisRule, thatRule) => {
   return (
