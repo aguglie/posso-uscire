@@ -6,7 +6,7 @@ import zonaBianca from "./zonaBianca";
 import _ from "lodash";
 import { Province } from "../lib/types";
 
-const allRules = [...zonaGialla, ...zonaArancione, ...zonaRossa, ...zonaBianca];
+const allRules = [...zonaBianca, ...zonaGialla, ...zonaArancione, ...zonaRossa];
 
 const rulesComparator = (thisRule, thatRule) => {
   return (
@@ -16,6 +16,29 @@ const rulesComparator = (thisRule, thatRule) => {
     _.isEqual(thisRule.details, thatRule.details) &&
     _.isEqual(thisRule.moreDetails, thatRule.moreDetails)
   );
+};
+
+const overlappingRulesReducer = (
+  rulesToOutput,
+  currentRule,
+  currentRuleIndex,
+  rules
+) => {
+  rulesToOutput.push(currentRule);
+
+  const prevRule = rules[currentRuleIndex - 1];
+
+  if (prevRule && new Date(currentRule.from) < new Date(prevRule.to)) {
+    const prevRuleCopy = Object.assign({}, prevRule);
+    prevRule.to = currentRule.from;
+
+    if (new Date(currentRule.to) < new Date(prevRuleCopy.to)) {
+      prevRuleCopy.from = currentRule.to;
+      rulesToOutput.push(prevRuleCopy);
+    }
+  }
+
+  return rulesToOutput;
 };
 
 const sameRulesReducer = (
@@ -48,5 +71,6 @@ export function getActiveRules(selectedProvince: Province) {
       (first, second) =>
         new Date(first.from).getTime() - new Date(second.from).getTime()
     )
+    .reduce(overlappingRulesReducer, [])
     .reduce(sameRulesReducer, []);
 }
