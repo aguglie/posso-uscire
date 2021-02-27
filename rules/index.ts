@@ -3,6 +3,7 @@ import zonaArancione from "./zonaArancione";
 import zonaGialla from "./zonaGialla";
 import zonaRossa from "./zonaRossa";
 import zonaBianca from "./zonaBianca";
+import allNotes from "./citiesNotes";
 import _ from "lodash";
 import { Province } from "../lib/types";
 
@@ -57,7 +58,7 @@ const sameRulesReducer = (
   return rulesToOutput;
 };
 
-export function getActiveRules(selectedProvince: Province) {
+export function getActiveRestrictions(selectedProvince: Province) {
   const now = Date.now();
   const activeRulesFilter = (rule) =>
     !rule?.to || new Date(rule?.to).getTime() > now;
@@ -66,7 +67,7 @@ export function getActiveRules(selectedProvince: Province) {
     (rule.regions && rule.regions.includes(selectedProvince.regione)) ||
     (rule.cities && rule.cities.includes(selectedProvince.sigla));
 
-  return allRules
+  const rules = allRules
     .filter(activeRulesFilter)
     .filter(rulesBySelectionFilter)
     .sort(
@@ -75,4 +76,14 @@ export function getActiveRules(selectedProvince: Province) {
     )
     .reduce(overlappingRulesReducer, [])
     .reduce(sameRulesReducer, []);
+
+  const notes = allNotes
+    .filter(activeRulesFilter)
+    .filter(rulesBySelectionFilter)
+    .sort(
+      (first, second) =>
+        new Date(first.from).getTime() - new Date(second.from).getTime()
+    );
+
+  return { rules, notes };
 }

@@ -4,17 +4,17 @@ import ActiveRulesList from "../components/ActiveRulesList";
 import Layout from "../components/Layout";
 import italianRegions from "../lib/italianRegions";
 import { Province } from "../lib/types";
-import { getActiveRules } from "../rules";
+import { getActiveRestrictions } from "../rules";
 
 // eslint-disable-next-line react/prop-types
 const Rules: React.FC<{
-  rules: any[];
+  restrictions: any[];
   province: Province;
   buildTime: number;
-}> = ({ buildTime, rules, province }) => {
+}> = ({ buildTime, restrictions, province }) => {
   return (
     <Layout buildTime={buildTime}>
-      <ActiveRulesList rules={rules} province={province} />
+      <ActiveRulesList restrictions={restrictions} province={province} />
     </Layout>
   );
 };
@@ -35,10 +35,10 @@ export const getStaticProps: GetStaticProps<{
 }> = async ({ params }) => {
   const { province } = params;
   const selectedProvince = italianRegions.find((p) => p.urlName === province);
-  const rules = getActiveRules(selectedProvince);
+  const restrictions = getActiveRestrictions(selectedProvince);
   return {
     props: {
-      rules,
+      restrictions,
       province: selectedProvince,
       buildTime: Date.now(),
     },

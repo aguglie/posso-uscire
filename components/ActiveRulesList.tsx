@@ -17,11 +17,15 @@ import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 
 export const useStyles = makeStyles((theme) => ({
-  copyrightBox: {
+  rulesBox: {
     marginTop: theme.spacing(4),
   },
-  contributeBox: {
-    marginTop: theme.spacing(0.4),
+  noteBox: {
+    marginTop: theme.spacing(4),
+  },
+  noteText: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
   },
   cardRoot: {
     marginBottom: theme.spacing(2),
@@ -147,7 +151,8 @@ Rule.propTypes = {
   rule: PropTypes.object,
 };
 
-export default function ActiveRulesList({ rules, province }) {
+export default function ActiveRulesList({ restrictions, province }) {
+  const { rules, notes } = restrictions;
   const classes = useStyles();
   const [language] = useLanguage();
   return (
@@ -162,11 +167,27 @@ export default function ActiveRulesList({ rules, province }) {
           📍 {province.nome}
         </Box>
       </Typography>
+      {notes.map((note) => (
+        <Typography
+          key={note.title}
+          component={"div"}
+          variant="body2"
+          color="textPrimary"
+          className={classes.noteBox}
+        >
+          <Box textAlign="center" fontSize="h5.fontSize">
+            {note.title[language]}
+          </Box>
+          <Box textAlign="left" fontSize={19} className={classes.noteText}>
+            {note.text[language]}
+          </Box>
+        </Typography>
+      ))}
       <Typography
         component={"div"}
         variant="body2"
         color="textPrimary"
-        className={classes.copyrightBox}
+        className={classes.rulesBox}
       >
         {rules.length === 0 ? (
           <Box textAlign="center" fontSize={20} color={"red"}>
@@ -185,6 +206,6 @@ export default function ActiveRulesList({ rules, province }) {
   );
 }
 ActiveRulesList.propTypes = {
-  rules: PropTypes.array,
+  restrictions: PropTypes.object,
   province: PropTypes.object,
 };
