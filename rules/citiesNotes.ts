@@ -1,4 +1,4 @@
-import { BERGAMO, BOLOGNA, BRESCIA, FROSINONE, RAVENNA } from "./Constants";
+import { BERGAMO, BOLOGNA, BRESCIA, COMO, FROSINONE, RAVENNA } from "./Constants";
 
 const title = {
   it: "📣 Restrizioni provinciali",
@@ -59,6 +59,6 @@ export default [
     },
     from: "2021/02/27 00:00:00",
     to: "2021/04/06 23:59:59",
-    cities: [BERGAMO, BRESCIA, FROSINONE],
+    cities: [BERGAMO, BRESCIA, COMO, FROSINONE],
   },
 ];
