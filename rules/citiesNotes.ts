@@ -1,4 +1,11 @@
-import { BERGAMO, BOLOGNA, BRESCIA, COMO, FROSINONE, RAVENNA } from "./Constants";
+import {
+  BERGAMO,
+  BOLOGNA,
+  BRESCIA,
+  COMO,
+  FROSINONE,
+  RAVENNA,
+} from "./Constants";
 
 const title = {
   it: "📣 Restrizioni provinciali",
