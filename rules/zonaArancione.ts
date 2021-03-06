@@ -153,8 +153,14 @@ export default [
   },
   {
     ...zonaArancioneRafforzata,
+    from: "2021/03/08 00:00:00",
+    to: "2021/04/06 23:59:59",
+    regions: [PIEMONTE],
+  },
+  {
+    ...zonaArancioneRafforzata,
     from: "2021/03/06 00:00:00",
     to: "2021/04/06 23:59:59",
-    regions: [LOMBARDIA, PIEMONTE],
+    regions: [LOMBARDIA],
   },
 ];
