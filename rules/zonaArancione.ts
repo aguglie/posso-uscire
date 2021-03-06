@@ -1,20 +1,18 @@
 import {
   ABRUZZO,
-  BOLZANO,
   CAMPANIA,
   EMILIA_ROMAGNA,
-  LIGURIA,
+  FRIULI_VENEZIA_GIULIA,
   LOMBARDIA,
   MARCHE,
-  MOLISE,
   PIEMONTE,
-  SICILIA,
   TOSCANA,
-  TRENTO,
+  TRENTINO_ALTO_ADIGE,
   UMBRIA,
+  VENETO,
 } from "./Constants";
 
-const zonaArancione = {
+const arancioneCommon = {
   name: {
     it: "🟧 Zona Arancione",
     en: "🟧 Orange Zone",
@@ -49,12 +47,6 @@ const zonaArancione = {
         "📝 Serve l'autocertificazione per gli spostamenti al di fuori del comune.",
       en:
         "📝 Self-certification is needed to justify shifts across municipalities.",
-    },
-    {
-      it:
-        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.",
-      en:
-        "🏚 Always allowed to return to one's residence, domicile or home. You can go to the second home, even if outside the region if purchased before 14/01/2021.",
     },
     {
       it:
@@ -96,38 +88,73 @@ const zonaArancione = {
   ],
 };
 
+const zonaArancione = {
+  ...arancioneCommon,
+  details: [
+    {
+      it:
+        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ✅ Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.",
+      en:
+        "🏚 Always allowed to return to one's residence, domicile or home. ✅ You can go to the second home, even if outside the region if purchased before 14/01/2021.",
+    },
+    ...arancioneCommon.details,
+  ],
+};
+
+const zonaArancioneRafforzata = {
+  ...arancioneCommon,
+  name: {
+    it: "🟧🟥 Zona Arancione Scuro",
+    en: "🟧🟥 Strengthened Orange Zone",
+  },
+  details: [
+    {
+      it:
+        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ❌ Non puoi recarti nella seconda casa se fuori comune",
+      en:
+        "🏚 Always allowed to return to one's residence, domicile or home. ❌ You cannot go to the second home if outside your town.",
+    },
+    ...arancioneCommon.details,
+  ],
+};
+
 export default [
   {
     ...zonaArancione,
-    from: "2021/02/21 00:00:00",
-    to: "2021/02/28 23:59:59",
+    from: "2021/03/01 00:00:00",
+    to: "2021/03/07 23:59:59",
     regions: [
-      LIGURIA,
+      PIEMONTE,
+      TRENTINO_ALTO_ADIGE,
+      FRIULI_VENEZIA_GIULIA,
+      VENETO,
+      EMILIA_ROMAGNA,
       TOSCANA,
       UMBRIA,
+      MARCHE,
       ABRUZZO,
-      SICILIA,
       CAMPANIA,
-      EMILIA_ROMAGNA,
-      MOLISE,
     ],
-    cities: [TRENTO],
   },
   {
     ...zonaArancione,
-    from: "2021/03/01 00:00:00",
+    from: "2021/03/08 00:00:00",
     to: "2021/04/06 23:59:59",
     regions: [
+      TRENTINO_ALTO_ADIGE,
+      FRIULI_VENEZIA_GIULIA,
+      VENETO,
+      EMILIA_ROMAGNA,
       TOSCANA,
       UMBRIA,
-      ABRUZZO,
-      SICILIA,
-      CAMPANIA,
-      EMILIA_ROMAGNA,
-      LOMBARDIA,
-      PIEMONTE,
       MARCHE,
+      ABRUZZO,
     ],
-    cities: [TRENTO, BOLZANO],
+  },
+  {
+    ...zonaArancioneRafforzata,
+    from: "2021/03/06 00:00:00",
+    to: "2021/04/06 23:59:59",
+    regions: [LOMBARDIA, PIEMONTE],
   },
 ];

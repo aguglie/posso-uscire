@@ -1,4 +1,4 @@
-import { BASILICATA, BOLZANO, MOLISE, PISTOIA, SIENA } from "./Constants";
+import { BASILICATA, CAMPANIA, MOLISE } from "./Constants";
 
 const zonaRossa = {
   name: {
@@ -80,23 +80,16 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    from: "2021/02/15 00:00:00",
-    to: "2021/02/28 23:59:59",
-    regions: [],
-    cities: [BOLZANO],
-  },
-  {
-    ...zonaRossa,
     from: "2021/03/01 00:00:00",
     to: "2021/03/07 23:59:59",
-    regions: [],
-    cities: [PISTOIA, SIENA],
+    regions: [BASILICATA, MOLISE],
+    cities: [],
   },
   {
     ...zonaRossa,
-    from: "2021/03/01 00:00:00",
+    from: "2021/03/07 00:00:00",
     to: "2021/04/06 23:59:59",
-    regions: [BASILICATA, MOLISE],
+    regions: [BASILICATA, MOLISE, CAMPANIA],
     cities: [],
   },
 ];
