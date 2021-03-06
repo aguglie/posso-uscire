@@ -29,4 +29,5 @@ export const SIENA = "SI";
 export const PISTOIA = "PT";
 export const BERGAMO = "BG";
 export const BRESCIA = "BS";
+export const COMO = "CO";
 export const FROSINONE = "FR";
