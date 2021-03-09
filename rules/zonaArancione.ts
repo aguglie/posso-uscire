@@ -33,12 +33,6 @@ const arancioneCommon = {
       en: "❌ Shopping malls are closed on holidays and days before holidays.",
     },
     {
-      it:
-        "👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
-      en:
-        "👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.",
-    },
-    {
       it: "🛏 Coprifuoco dalle 22.00 alle 05.00.",
       en: "🛏 Curfew from 10 PM to 5 AM.",
     },
@@ -93,6 +87,12 @@ const zonaArancione = {
   details: [
     {
       it:
+        "👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
+      en:
+        "👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.",
+    },
+    {
+      it:
         "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ✅ Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.",
       en:
         "🏚 Always allowed to return to one's residence, domicile or home. ✅ You can go to the second home, even if outside the region if purchased before 14/01/2021.",
@@ -108,6 +108,12 @@ const zonaArancioneRafforzata = {
     en: "🟧🟥 Strengthened Orange Zone",
   },
   details: [
+    {
+      it:
+        "👭 Sono vietati gli spostamenti verso le abitazioni private: non si possono trovare amici e parenti neanche nella stessa regione.",
+      en:
+        "👭 It's prohibited to shift to private homes: you cannot travel to friends and relatives even in the same region.",
+    },
     {
       it:
         "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ❌ Non puoi recarti nella seconda casa se fuori comune",
