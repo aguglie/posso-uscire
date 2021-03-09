@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   changeLanguageBox: {
     marginBottom: theme.spacing(1),
-    cursor: pointer,
+    cursor: "pointer",
   },
 }));
 
