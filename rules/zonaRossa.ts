@@ -49,9 +49,9 @@ const zonaRossa = {
   moreDetails: [
     {
       it:
-        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.",
+        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ❌ Non puoi recarti nella seconda casa se fuori comune",
       en:
-        "🏚 Always allowed to return to one's residence, domicile or home. You can go to the second home, even if outside the region if purchased before 14/01/2021.",
+        "🏚 Always allowed to return to one's residence, domicile or home. ❌ You cannot go to the second home if outside your town.",
     },
     {
       it: "⛪ Consentito l' accesso ai luoghi di culto e funzioni religiose.",
