@@ -1,4 +1,17 @@
-import { BASILICATA, CAMPANIA, MOLISE } from "./Constants";
+import {
+  BASILICATA,
+  CAMPANIA,
+  EMILIA_ROMAGNA,
+  FRIULI_VENEZIA_GIULIA,
+  LAZIO,
+  LOMBARDIA,
+  MARCHE,
+  MOLISE,
+  PIEMONTE,
+  PUGLIA,
+  TRENTINO_ALTO_ADIGE,
+  VENETO,
+} from "./Constants";
 
 const zonaRossa = {
   name: {
@@ -80,16 +93,29 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    from: "2021/03/01 00:00:00",
-    to: "2021/03/07 23:59:59",
-    regions: [BASILICATA, MOLISE],
+    from: "2021/03/07 00:00:00",
+    to: "2021/03/14 23:59:59",
+    regions: [BASILICATA, MOLISE, CAMPANIA],
     cities: [],
   },
   {
     ...zonaRossa,
-    from: "2021/03/07 00:00:00",
-    to: "2021/04/06 23:59:59",
-    regions: [BASILICATA, MOLISE, CAMPANIA],
+    from: "2021/03/15 00:00:00",
+    to: "2021/03/21 23:59:59",
+    regions: [
+      PIEMONTE,
+      LOMBARDIA,
+      TRENTINO_ALTO_ADIGE,
+      VENETO,
+      FRIULI_VENEZIA_GIULIA,
+      EMILIA_ROMAGNA,
+      MARCHE,
+      LAZIO,
+      MOLISE,
+      PUGLIA,
+      CAMPANIA,
+      BASILICATA,
+    ],
     cities: [],
   },
 ];

@@ -1,14 +1,17 @@
 import {
   ABRUZZO,
-  CAMPANIA,
+  CALABRIA,
   EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
+  LIGURIA,
   LOMBARDIA,
   MARCHE,
   PIEMONTE,
+  SICILIA,
   TOSCANA,
   TRENTINO_ALTO_ADIGE,
   UMBRIA,
+  VALLE_D_AOSTA,
   VENETO,
 } from "./Constants";
 
@@ -127,10 +130,9 @@ const zonaArancioneRafforzata = {
 export default [
   {
     ...zonaArancione,
-    from: "2021/03/01 00:00:00",
-    to: "2021/03/07 23:59:59",
+    from: "2021/03/08 00:00:00",
+    to: "2021/03/14 23:59:59",
     regions: [
-      PIEMONTE,
       TRENTINO_ALTO_ADIGE,
       FRIULI_VENEZIA_GIULIA,
       VENETO,
@@ -139,34 +141,26 @@ export default [
       UMBRIA,
       MARCHE,
       ABRUZZO,
-      CAMPANIA,
     ],
+  },
+  {
+    ...zonaArancioneRafforzata,
+    from: "2021/03/08 00:00:00",
+    to: "2021/03/14 23:59:59",
+    regions: [PIEMONTE, LOMBARDIA],
   },
   {
     ...zonaArancione,
-    from: "2021/03/08 00:00:00",
-    to: "2021/04/06 23:59:59",
+    from: "2021/03/15 00:00:00",
+    to: "2021/03/21 23:59:59",
     regions: [
-      TRENTINO_ALTO_ADIGE,
-      FRIULI_VENEZIA_GIULIA,
-      VENETO,
-      EMILIA_ROMAGNA,
+      VALLE_D_AOSTA,
+      LIGURIA,
       TOSCANA,
       UMBRIA,
-      MARCHE,
       ABRUZZO,
+      CALABRIA,
+      SICILIA,
     ],
-  },
-  {
-    ...zonaArancioneRafforzata,
-    from: "2021/03/08 00:00:00",
-    to: "2021/04/06 23:59:59",
-    regions: [PIEMONTE],
-  },
-  {
-    ...zonaArancioneRafforzata,
-    from: "2021/03/06 00:00:00",
-    to: "2021/04/06 23:59:59",
-    regions: [LOMBARDIA],
   },
 ];

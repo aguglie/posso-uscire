@@ -1,12 +1,10 @@
 import {
   CALABRIA,
-  FRIULI_VENEZIA_GIULIA,
   LAZIO,
   LIGURIA,
   PUGLIA,
   SICILIA,
   VALLE_D_AOSTA,
-  VENETO,
 } from "./Constants";
 
 const commonDetails = [
@@ -98,23 +96,8 @@ const zonaGiallaRafforzata = {
 export default [
   {
     ...zonaGiallaRafforzata,
-    from: "2021/03/01 00:00:00",
-    to: "2021/03/07 23:59:59",
-    regions: [
-      VALLE_D_AOSTA,
-      VENETO,
-      FRIULI_VENEZIA_GIULIA,
-      LAZIO,
-      PUGLIA,
-      CALABRIA,
-      LIGURIA,
-      SICILIA,
-    ],
-  },
-  {
-    ...zonaGiallaRafforzata,
     from: "2021/03/08 00:00:00",
-    to: "2021/04/06 23:59:59",
+    to: "2021/03/14 23:59:59",
     regions: [VALLE_D_AOSTA, LAZIO, PUGLIA, CALABRIA, LIGURIA, SICILIA],
   },
 ];
