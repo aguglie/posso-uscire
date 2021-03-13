@@ -113,9 +113,9 @@ const zonaArancioneRafforzata = {
   details: [
     {
       it:
-        "👭 Sono vietati gli spostamenti verso le abitazioni private: non si possono trovare amici e parenti neanche nella stessa regione.",
+        "👭❗️ Sono vietati gli spostamenti verso le abitazioni private: non si possono trovare amici e parenti neanche nello stesso comune.",
       en:
-        "👭 It's prohibited to shift to private homes: you cannot travel to friends and relatives even in the same region.",
+        "👭❗️ It's prohibited to shift to private homes: you cannot travel to friends and relatives even in the same town.",
     },
     {
       it:
