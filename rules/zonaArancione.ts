@@ -1,18 +1,11 @@
 import {
   ABRUZZO,
   CALABRIA,
-  EMILIA_ROMAGNA,
-  FRIULI_VENEZIA_GIULIA,
   LIGURIA,
-  LOMBARDIA,
-  MARCHE,
-  PIEMONTE,
   SICILIA,
   TOSCANA,
-  TRENTINO_ALTO_ADIGE,
   UMBRIA,
   VALLE_D_AOSTA,
-  VENETO,
 } from "./Constants";
 
 const arancioneCommon = {
@@ -103,7 +96,6 @@ const zonaArancione = {
     ...arancioneCommon.details,
   ],
 };
-
 
 export default [
   {
