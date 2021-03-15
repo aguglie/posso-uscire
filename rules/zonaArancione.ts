@@ -104,51 +104,8 @@ const zonaArancione = {
   ],
 };
 
-const zonaArancioneRafforzata = {
-  ...arancioneCommon,
-  name: {
-    it: "🟧🟥 Zona Arancione Scuro",
-    en: "🟧🟥 Strengthened Orange Zone",
-  },
-  details: [
-    {
-      it:
-        "👭❗️ Sono vietati gli spostamenti verso le abitazioni private: non si possono trovare amici e parenti neanche nello stesso comune.",
-      en:
-        "👭❗️ It's prohibited to shift to private homes: you cannot travel to friends and relatives even in the same town.",
-    },
-    {
-      it:
-        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ❌ Non puoi recarti nella seconda casa se fuori comune",
-      en:
-        "🏚 Always allowed to return to one's residence, domicile or home. ❌ You cannot go to the second home if outside your town.",
-    },
-    ...arancioneCommon.details,
-  ],
-};
 
 export default [
-  {
-    ...zonaArancione,
-    from: "2021/03/08 00:00:00",
-    to: "2021/03/14 23:59:59",
-    regions: [
-      TRENTINO_ALTO_ADIGE,
-      FRIULI_VENEZIA_GIULIA,
-      VENETO,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      UMBRIA,
-      MARCHE,
-      ABRUZZO,
-    ],
-  },
-  {
-    ...zonaArancioneRafforzata,
-    from: "2021/03/08 00:00:00",
-    to: "2021/03/14 23:59:59",
-    regions: [PIEMONTE, LOMBARDIA],
-  },
   {
     ...zonaArancione,
     from: "2021/03/15 00:00:00",
