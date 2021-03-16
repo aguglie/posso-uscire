@@ -1,5 +1,4 @@
 import {
-  BASILICATA,
   CAMPANIA,
   EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
@@ -87,13 +86,6 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    from: "2021/03/07 00:00:00",
-    to: "2021/03/14 23:59:59",
-    regions: [BASILICATA, MOLISE, CAMPANIA],
-    cities: [],
-  },
-  {
-    ...zonaRossa,
     from: "2021/03/15 00:00:00",
     to: "2021/03/21 23:59:59",
     regions: [
@@ -108,7 +100,6 @@ export default [
       MOLISE,
       PUGLIA,
       CAMPANIA,
-      BASILICATA,
     ],
     cities: [],
   },
