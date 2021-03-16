@@ -6,6 +6,7 @@ import {
   TOSCANA,
   UMBRIA,
   VALLE_D_AOSTA,
+  BASILICATA,
 } from "./Constants";
 
 const arancioneCommon = {
@@ -110,6 +111,7 @@ export default [
       ABRUZZO,
       CALABRIA,
       SICILIA,
+      BASILICATA,
     ],
   },
 ];
