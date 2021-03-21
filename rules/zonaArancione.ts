@@ -7,6 +7,8 @@ import {
   UMBRIA,
   VALLE_D_AOSTA,
   BASILICATA,
+  MOLISE,
+  SARDEGNA,
 } from "./Constants";
 
 const arancioneCommon = {
@@ -112,6 +114,23 @@ export default [
       CALABRIA,
       SICILIA,
       BASILICATA,
+    ],
+  },
+  {
+    ...zonaArancione,
+    from: "2021/03/22 00:00:00",
+    to: "2021/03/28 23:59:59",
+    regions: [
+      VALLE_D_AOSTA,
+      LIGURIA,
+      TOSCANA,
+      UMBRIA,
+      ABRUZZO,
+      CALABRIA,
+      SICILIA,
+      BASILICATA,
+      MOLISE,
+      SARDEGNA,
     ],
   },
 ];

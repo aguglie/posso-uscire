@@ -103,4 +103,22 @@ export default [
     ],
     cities: [],
   },
+  {
+    ...zonaRossa,
+    from: "2021/03/22 00:00:00",
+    to: "2021/03/28 23:59:59",
+    regions: [
+      PIEMONTE,
+      LOMBARDIA,
+      TRENTINO_ALTO_ADIGE,
+      VENETO,
+      FRIULI_VENEZIA_GIULIA,
+      EMILIA_ROMAGNA,
+      MARCHE,
+      LAZIO,
+      PUGLIA,
+      CAMPANIA,
+    ],
+    cities: [],
+  },
 ];
