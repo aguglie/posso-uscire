@@ -12,6 +12,9 @@ import {
   LAZIO,
   TRENTO,
   BOLZANO,
+  TRENTINO_ALTO_ADIGE,
+  VENETO,
+  MARCHE,
 } from "./Constants";
 
 const arancioneCommon = {
@@ -106,33 +109,21 @@ const zonaArancione = {
 export default [
   {
     ...zonaArancione,
-    from: "2021/03/22 00:00:00",
-    to: "2021/03/28 23:59:59",
+    from: "2021/04/05 00:00:00",
+    to: "2021/04/11 23:59:59",
     regions: [
-      VALLE_D_AOSTA,
+      TRENTINO_ALTO_ADIGE,
+      VENETO,
       LIGURIA,
-      TOSCANA,
+      MARCHE,
       UMBRIA,
+      LAZIO,
       ABRUZZO,
-      CALABRIA,
-      SICILIA,
-      BASILICATA,
       MOLISE,
+      BASILICATA,
+      SICILIA,
       SARDEGNA,
     ],
-    cities: [BOLZANO],
-  },
-  {
-    ...zonaArancione,
-    from: "2021/03/29 00:00:00",
-    to: "2021/04/02 23:59:59",
-    regions: [LIGURIA, UMBRIA, ABRUZZO, SICILIA, BASILICATA, MOLISE, SARDEGNA],
-    cities: [BOLZANO],
-  },
-  {
-    ...zonaArancione,
-    from: "2021/03/30 00:00:00",
-    to: "2021/04/02 23:59:59",
-    regions: [LAZIO],
+    cities: [],
   },
 ];
