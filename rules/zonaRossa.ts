@@ -35,12 +35,6 @@ const zonaRossa = {
     },
     {
       it:
-        "🧑‍🤝‍🧑 Nelle giornate del 3,4,5 Aprile è consentita la visita ad amici e parenti, una volta al giorno, senza cambiare regione, nel limite di 2 persone.",
-      en:
-        "🧑‍🤝‍🧑 On April 3, 4 and 5, you can shift to friends and relatives once a day, without changing region. Limit fixed to 2 people.",
-    },
-    {
-      it:
         "🍣 Bar aperti per asporto fino alle 18. Ristoranti aperti per asporto fino alle 22. E' sempre consentito il servizio di consegna a domicilio.",
       en:
         "🍣 Bars open for takeaway until 6pm. Restaurants open for takeaway until 10pm. The home-delivery service is always allowed.",
