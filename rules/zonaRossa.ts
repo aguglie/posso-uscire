@@ -6,6 +6,7 @@ import {
   LOMBARDIA,
   PIEMONTE,
   PUGLIA,
+  SARDEGNA,
   TOSCANA,
   VALLE_D_AOSTA,
 } from "./Constants";
@@ -97,6 +98,13 @@ export default [
       CAMPANIA,
       CALABRIA,
     ],
+    cities: [],
+  },
+  {
+    ...zonaRossa,
+    from: "2021/04/12 00:00:00",
+    to: "2021/04/17 23:59:59",
+    regions: [VALLE_D_AOSTA, PUGLIA, CAMPANIA, SARDEGNA],
     cities: [],
   },
 ];
