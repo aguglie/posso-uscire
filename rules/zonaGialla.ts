@@ -1,12 +1,3 @@
-import {
-  CALABRIA,
-  LAZIO,
-  LIGURIA,
-  PUGLIA,
-  SICILIA,
-  VALLE_D_AOSTA,
-} from "./Constants";
-
 const commonDetails = [
   {
     it:
@@ -93,11 +84,4 @@ const zonaGiallaRafforzata = {
   moreDetails,
 };
 
-export default [
-  {
-    ...zonaGiallaRafforzata,
-    from: "2021/03/08 00:00:00",
-    to: "2021/03/14 23:59:59",
-    regions: [VALLE_D_AOSTA, LAZIO, PUGLIA, CALABRIA, LIGURIA, SICILIA],
-  },
-];
+export default [];

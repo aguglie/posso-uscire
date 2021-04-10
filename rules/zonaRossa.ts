@@ -1,24 +1,13 @@
 import {
-  ABRUZZO,
-  BASILICATA,
   CALABRIA,
   CAMPANIA,
   EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
-  LAZIO,
-  LIGURIA,
   LOMBARDIA,
-  MARCHE,
-  MOLISE,
   PIEMONTE,
   PUGLIA,
-  SARDEGNA,
-  SICILIA,
   TOSCANA,
-  TRENTINO_ALTO_ADIGE,
-  UMBRIA,
   VALLE_D_AOSTA,
-  VENETO,
 } from "./Constants";
 
 const zonaRossa = {
@@ -93,33 +82,6 @@ const zonaRossa = {
 };
 
 export default [
-  {
-    ...zonaRossa,
-    from: "2021/04/03 00:00:00",
-    to: "2021/04/05 23:59:59",
-    regions: [
-      SICILIA,
-      PIEMONTE,
-      MARCHE,
-      TOSCANA,
-      CAMPANIA,
-      PUGLIA,
-      VENETO,
-      LOMBARDIA,
-      EMILIA_ROMAGNA,
-      TRENTINO_ALTO_ADIGE,
-      SARDEGNA,
-      MOLISE,
-      CALABRIA,
-      ABRUZZO,
-      LAZIO,
-      LIGURIA,
-      FRIULI_VENEZIA_GIULIA,
-      BASILICATA,
-      UMBRIA,
-      VALLE_D_AOSTA,
-    ],
-  },
   {
     ...zonaRossa,
     from: "2021/04/05 00:00:00",

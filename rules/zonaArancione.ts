@@ -1,20 +1,15 @@
 import {
   ABRUZZO,
-  CALABRIA,
-  LIGURIA,
-  SICILIA,
-  TOSCANA,
-  UMBRIA,
-  VALLE_D_AOSTA,
   BASILICATA,
+  LAZIO,
+  LIGURIA,
+  MARCHE,
   MOLISE,
   SARDEGNA,
-  LAZIO,
-  TRENTO,
-  BOLZANO,
+  SICILIA,
   TRENTINO_ALTO_ADIGE,
+  UMBRIA,
   VENETO,
-  MARCHE,
 } from "./Constants";
 
 const arancioneCommon = {
