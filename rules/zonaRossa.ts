@@ -103,8 +103,16 @@ export default [
   {
     ...zonaRossa,
     from: "2021/04/12 00:00:00",
-    to: "2021/04/17 23:59:59",
+    to: "2021/04/18 23:59:59",
     regions: [VALLE_D_AOSTA, PUGLIA, CAMPANIA, SARDEGNA],
+    cities: [],
+  },
+
+  {
+    ...zonaRossa,
+    from: "2021/04/19 00:00:00",
+    to: "2021/04/25 23:59:59",
+    regions: [VALLE_D_AOSTA, PUGLIA, SARDEGNA],
     cities: [],
   },
 ];
