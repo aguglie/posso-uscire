@@ -1,15 +1,4 @@
-import {
-  CALABRIA,
-  CAMPANIA,
-  EMILIA_ROMAGNA,
-  FRIULI_VENEZIA_GIULIA,
-  LOMBARDIA,
-  PIEMONTE,
-  PUGLIA,
-  SARDEGNA,
-  TOSCANA,
-  VALLE_D_AOSTA,
-} from "./Constants";
+import { SARDEGNA } from "./Constants";
 
 const zonaRossa = {
   name: {
@@ -17,6 +6,10 @@ const zonaRossa = {
     en: "🟥 Red Zone",
   },
   details: [
+    {
+      it: "🛫 Per entrare in zona arancione o rossa serve il 'Pass Verde'",
+      en: "🛫 To enter into an orange or red zone you need a 'Green Pass'",
+    },
     {
       it:
         "👭❗️ Sono vietati gli spostamenti verso le abitazioni private: non si possono trovare amici e parenti neanche nello stesso comune.",
@@ -85,34 +78,9 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    from: "2021/04/05 00:00:00",
-    to: "2021/04/11 23:59:59",
-    regions: [
-      VALLE_D_AOSTA,
-      PIEMONTE,
-      LOMBARDIA,
-      FRIULI_VENEZIA_GIULIA,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      PUGLIA,
-      CAMPANIA,
-      CALABRIA,
-    ],
-    cities: [],
-  },
-  {
-    ...zonaRossa,
-    from: "2021/04/12 00:00:00",
-    to: "2021/04/18 23:59:59",
-    regions: [VALLE_D_AOSTA, PUGLIA, CAMPANIA, SARDEGNA],
-    cities: [],
-  },
-
-  {
-    ...zonaRossa,
-    from: "2021/04/19 00:00:00",
-    to: "2021/04/25 23:59:59",
-    regions: [VALLE_D_AOSTA, PUGLIA, SARDEGNA],
+    from: "2021/04/26 00:00:00",
+    to: "2021/05/02 23:59:59",
+    regions: [SARDEGNA],
     cities: [],
   },
 ];

@@ -1,22 +1,9 @@
 import {
-  ABRUZZO,
   BASILICATA,
   CALABRIA,
-  CAMPANIA,
-  EMILIA_ROMAGNA,
-  FRIULI_VENEZIA_GIULIA,
-  LAZIO,
-  LIGURIA,
-  LOMBARDIA,
-  MARCHE,
-  MOLISE,
-  PIEMONTE,
-  SARDEGNA,
+  PUGLIA,
   SICILIA,
-  TOSCANA,
-  TRENTINO_ALTO_ADIGE,
-  UMBRIA,
-  VENETO,
+  VALLE_D_AOSTA,
 } from "./Constants";
 
 const arancioneCommon = {
@@ -25,6 +12,10 @@ const arancioneCommon = {
     en: "🟧 Orange Zone",
   },
   details: [
+    {
+      it: "🛫 Per entrare in zona arancione o rossa serve il 'Pass Verde'.",
+      en: "🛫 To enter into an orange or red zone you need a 'Green Pass'.",
+    },
     {
       it:
         "🍣 Bar aperti per solo asporto fino alle 18. Ristoranti aperti per solo asporto fino alle 22. E' sempre consentito il servizio di consegna a domicilio.",
@@ -94,9 +85,9 @@ const zonaArancione = {
   details: [
     {
       it:
-        "👭 Si può uscire (al massimo in coppia) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
+        "👭 Si può uscire (al massimo in 4 non conviventi) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
       en:
-        "👭 It is allowed to travel (not more than 2 people at a time) to friends and relatives once a day without changing municipality.",
+        "👭 It is allowed to travel (not more than 4 people at a time) to friends and relatives once a day without changing municipality.",
     },
     {
       it:
@@ -111,70 +102,9 @@ const zonaArancione = {
 export default [
   {
     ...zonaArancione,
-    from: "2021/04/05 00:00:00",
-    to: "2021/04/11 23:59:59",
-    regions: [
-      TRENTINO_ALTO_ADIGE,
-      VENETO,
-      LIGURIA,
-      MARCHE,
-      UMBRIA,
-      LAZIO,
-      ABRUZZO,
-      MOLISE,
-      BASILICATA,
-      SICILIA,
-      SARDEGNA,
-    ],
-    cities: [],
-  },
-  {
-    ...zonaArancione,
-    from: "2021/04/12 00:00:00",
-    to: "2021/04/18 23:59:59",
-    regions: [
-      TRENTINO_ALTO_ADIGE,
-      VENETO,
-      LIGURIA,
-      MARCHE,
-      UMBRIA,
-      LAZIO,
-      ABRUZZO,
-      MOLISE,
-      BASILICATA,
-      SICILIA,
-      PIEMONTE,
-      LOMBARDIA,
-      FRIULI_VENEZIA_GIULIA,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      CALABRIA,
-    ],
-    cities: [],
-  },
-  {
-    ...zonaArancione,
-    from: "2021/04/19 00:00:00",
-    to: "2021/04/25 23:59:59",
-    regions: [
-      TRENTINO_ALTO_ADIGE,
-      VENETO,
-      LIGURIA,
-      MARCHE,
-      UMBRIA,
-      LAZIO,
-      ABRUZZO,
-      MOLISE,
-      BASILICATA,
-      SICILIA,
-      PIEMONTE,
-      LOMBARDIA,
-      FRIULI_VENEZIA_GIULIA,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      CALABRIA,
-      CAMPANIA,
-    ],
+    from: "2021/04/26 00:00:00",
+    to: "2021/05/02 23:59:59",
+    regions: [VALLE_D_AOSTA, PUGLIA, BASILICATA, CALABRIA, SICILIA],
     cities: [],
   },
 ];

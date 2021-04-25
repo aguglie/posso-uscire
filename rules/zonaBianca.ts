@@ -1,5 +1,3 @@
-import { SARDEGNA } from "./Constants";
-
 const zonaBianca = {
   name: {
     it: "⬜ Zona Bianca",

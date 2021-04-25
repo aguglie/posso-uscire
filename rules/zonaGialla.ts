@@ -1,9 +1,32 @@
+import {
+  ABRUZZO,
+  CAMPANIA,
+  EMILIA_ROMAGNA,
+  FRIULI_VENEZIA_GIULIA,
+  LAZIO,
+  LIGURIA,
+  LOMBARDIA,
+  MARCHE,
+  MOLISE,
+  PIEMONTE,
+  TOSCANA,
+  TRENTINO_ALTO_ADIGE,
+  UMBRIA,
+  VENETO,
+} from "./Constants";
+
 const commonDetails = [
   {
     it:
-      "🍻 Bar e ristoranti aperti fino alle 18. Ristoranti aperti per asporto fino alle 22. E' sempre consentito il servizio di consegna a domicilio.",
+      "👭 Si può uscire (al massimo in 4 non conviventi) per raggiungere amici e parenti una volta al giorno.",
     en:
-      "🍻 Bars and restaurants open until 6pm. Restaurants open for takeaway until 10pm. Home delivery is always allowed.",
+      "👭 It is allowed to travel (not more than 4 people at a time) to friends and relatives once a day.",
+  },
+  {
+    it:
+      "🍻 Bar e ristoranti aperti, servizio al tavolo solo se all'aperto. E' sempre consentito il servizio di consegna a domicilio.",
+    en:
+      "🍻 Bars and restaurants are open, you are free to sit only outdoors. Home delivery is always allowed.",
   },
   {
     it: "🛍 Negozi aperti.",
@@ -38,10 +61,18 @@ const commonDetails = [
 ];
 const moreDetails = [
   {
+    it: "🛫 Puoi muoverti liberamente tra regioni gialle e bianche.",
+    en: "🛫 You can move freely between yellow and white regions.",
+  },
+  {
     it:
       "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.",
     en:
       "🏚 Always allowed to return to one's residence, domicile or home. You can go to the second home, even if outside the region if purchased before 14/01/2021.",
+  },
+  {
+    it: "🎭 Aperti cinema e teatri. E' possibile partecipare a concerti.",
+    en: "🎭 Cinemas and theaters are open. It is possible to attend concerts.",
   },
   {
     it: "⛪ Consentito l' accesso ai luoghi di culto e funzioni religiose.",
@@ -53,35 +84,36 @@ const moreDetails = [
   },
 ];
 
-// eslint-disable-next-line no-unused-vars
 const zonaGialla = {
   name: {
     it: "🟨 Zona Gialla",
     en: "🟨 Yellow Zone",
   },
-  details: [
-    ...commonDetails,
-    {
-      it: "✅ Consentiti spostamenti in altre regioni gialle.",
-      en: "✅ Shifts to other yellow regions are allowed.",
-    },
-  ],
+  details: commonDetails,
   moreDetails,
 };
 
-const zonaGiallaRafforzata = {
-  name: {
-    it: "🟨 Zona Gialla Rafforzata",
-    en: "🟨 Strengthened Yellow Zone",
+export default [
+  {
+    ...zonaGialla,
+    from: "2021/04/26 00:00:00",
+    to: "2021/05/02 23:59:59",
+    regions: [
+      PIEMONTE,
+      LOMBARDIA,
+      TRENTINO_ALTO_ADIGE,
+      FRIULI_VENEZIA_GIULIA,
+      VENETO,
+      LIGURIA,
+      EMILIA_ROMAGNA,
+      TOSCANA,
+      UMBRIA,
+      MARCHE,
+      LAZIO,
+      ABRUZZO,
+      MOLISE,
+      CAMPANIA,
+    ],
+    cities: [],
   },
-  details: [
-    ...commonDetails,
-    {
-      it: "🚫 Non si possono superare i confini della regione.",
-      en: "🚫 Shifts towards other regions are not allowed.",
-    },
-  ],
-  moreDetails,
-};
-
-export default [];
+];
