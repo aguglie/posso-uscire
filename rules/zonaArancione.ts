@@ -6,12 +6,24 @@ import {
   VALLE_D_AOSTA,
 } from "./Constants";
 
-const arancioneCommon = {
+const zonaArancione = {
   name: {
     it: "🟧 Zona Arancione",
     en: "🟧 Orange Zone",
   },
   details: [
+    {
+      it:
+        "👭 Si può uscire (al massimo in 4 non conviventi) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
+      en:
+        "👭 It is allowed to travel (not more than 4 people at a time) to friends and relatives once a day without changing municipality.",
+    },
+    {
+      it:
+        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ✅ Puoi recarti nella seconda casa, anche se fuori regione (se in zona arancione o rossa) se acquistata prima del 14/01/2021.",
+      en:
+        "🏚 Always allowed to return to one's residence, domicile or home. ✅ You can go to the second home, even if outside the region (if target region is orange or red) if purchased before 14/01/2021.",
+    },
     {
       it: "🛫 Per entrare in zona arancione o rossa serve il 'Pass Verde'.",
       en: "🛫 To enter into an orange or red zone you need a 'Green Pass'.",
@@ -52,7 +64,7 @@ const arancioneCommon = {
       it:
         "👭 Si può uscire dal comune per comprovate esigenze di lavoro, di salute o situazione di necessità.",
       en:
-        "👭 Shifts across municipalities are allowed for work requirements, health needs, and situations of need.",
+        "👭 Shifts across municipalities are allowed for work requirements, health needs or situations of need.",
     },
     {
       it:
@@ -77,25 +89,6 @@ const arancioneCommon = {
       en:
         "📚 Culture-related places are closed. Libraries open by reservation.",
     },
-  ],
-};
-
-const zonaArancione = {
-  ...arancioneCommon,
-  details: [
-    {
-      it:
-        "👭 Si può uscire (al massimo in 4 non conviventi) per raggiungere amici e parenti una volta al giorno. Senza cambiare comune.",
-      en:
-        "👭 It is allowed to travel (not more than 4 people at a time) to friends and relatives once a day without changing municipality.",
-    },
-    {
-      it:
-        "🏚 Consentito sempre il rientro alla propria residenza, domicilio o abitazione. ✅ Puoi recarti nella seconda casa, anche se fuori regione se acquistata prima del 14/01/2021.",
-      en:
-        "🏚 Always allowed to return to one's residence, domicile or home. ✅ You can go to the second home, even if outside the region if purchased before 14/01/2021.",
-    },
-    ...arancioneCommon.details,
   ],
 };
 

@@ -52,12 +52,6 @@ const commonDetails = [
     en:
       "📝 It is allowed to have shifts without carrying the self-certification inside your region.",
   },
-  {
-    it:
-      "⛔️ Non si possono superare i confini della regione salvo per esigenze lavorative, situazioni di necessità o motivi di salute.",
-    en:
-      "⛔️ It is not allowed to cross the boundaries of the region except for work needs, mandatory necessities or health reasons.",
-  },
 ];
 const moreDetails = [
   {
