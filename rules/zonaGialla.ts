@@ -55,8 +55,10 @@ const commonDetails = [
 ];
 const moreDetails = [
   {
-    it: "🛫 Puoi muoverti liberamente tra regioni gialle e bianche.",
-    en: "🛫 You can move freely between yellow and white regions.",
+    it:
+      "🛫 Puoi muoverti liberamente tra regioni gialle e bianche. Serve il pass verde per recarsi in regioni rosse o arancioni.",
+    en:
+      "🛫 You can move freely between yellow and white regions. Green-pass is needed to travel to orange or red regions.",
   },
   {
     it:

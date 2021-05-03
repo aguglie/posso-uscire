@@ -52,6 +52,11 @@ const zonaArancione = {
       en:
         "⛔️ It is not allowed to cross the boundaries of the region except for work needs, mandatory necessities or health reasons.",
     },
+    {
+      it:
+        "🛫 Con il pass verde puoi spostarti in tutto il territorio nazionale.",
+      en: "🛫 With the green-pass you can move to other regions.",
+    },
   ],
   moreDetails: [
     {
