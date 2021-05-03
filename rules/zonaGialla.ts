@@ -90,8 +90,8 @@ const zonaGialla = {
 export default [
   {
     ...zonaGialla,
-    from: "2021/04/26 00:00:00",
-    to: "2021/05/02 23:59:59",
+    from: "2021/05/03 00:00:00",
+    to: "2021/05/09 23:59:59",
     regions: [
       PIEMONTE,
       LOMBARDIA,

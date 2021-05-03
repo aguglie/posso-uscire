@@ -1,4 +1,4 @@
-import { SARDEGNA } from "./Constants";
+import { VALLE_D_AOSTA } from "./Constants";
 
 const zonaRossa = {
   name: {
@@ -78,9 +78,9 @@ const zonaRossa = {
 export default [
   {
     ...zonaRossa,
-    from: "2021/04/26 00:00:00",
-    to: "2021/05/02 23:59:59",
-    regions: [SARDEGNA],
+    from: "2021/05/03 00:00:00",
+    to: "2021/05/09 23:59:59",
+    regions: [VALLE_D_AOSTA],
     cities: [],
   },
 ];

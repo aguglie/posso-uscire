@@ -1,10 +1,4 @@
-import {
-  BASILICATA,
-  CALABRIA,
-  PUGLIA,
-  SICILIA,
-  VALLE_D_AOSTA,
-} from "./Constants";
+import { BASILICATA, CALABRIA, PUGLIA, SARDEGNA, SICILIA } from "./Constants";
 
 const zonaArancione = {
   name: {
@@ -95,9 +89,9 @@ const zonaArancione = {
 export default [
   {
     ...zonaArancione,
-    from: "2021/04/26 00:00:00",
-    to: "2021/05/02 23:59:59",
-    regions: [VALLE_D_AOSTA, PUGLIA, BASILICATA, CALABRIA, SICILIA],
+    from: "2021/05/03 00:00:00",
+    to: "2021/05/09 23:59:59",
+    regions: [PUGLIA, BASILICATA, CALABRIA, SICILIA, SARDEGNA],
     cities: [],
   },
 ];
