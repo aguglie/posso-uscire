@@ -1,5 +1,4 @@
-import { VALLE_D_AOSTA } from "./Constants";
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const zonaRossa = {
   name: {
     it: "🟥 Zona Rossa",
@@ -75,12 +74,4 @@ const zonaRossa = {
   ],
 };
 
-export default [
-  {
-    ...zonaRossa,
-    from: "2021/05/03 00:00:00",
-    to: "2021/05/09 23:59:59",
-    regions: [VALLE_D_AOSTA],
-    cities: [],
-  },
-];
+export default [];

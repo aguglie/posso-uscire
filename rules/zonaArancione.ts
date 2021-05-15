@@ -101,16 +101,16 @@ const zonaArancione = {
 export default [
   {
     ...zonaArancione,
-    from: "2021/05/03 00:00:00",
-    to: "2021/05/09 23:59:59",
-    regions: [PUGLIA, BASILICATA, CALABRIA, SICILIA, SARDEGNA],
+    from: "2021/05/10 00:00:00",
+    to: "2021/05/16 23:59:59",
+    regions: [VALLE_D_AOSTA, SICILIA, SARDEGNA],
     cities: [],
   },
   {
     ...zonaArancione,
-    from: "2021/05/10 00:00:00",
-    to: "2021/05/16 23:59:59",
-    regions: [VALLE_D_AOSTA, SICILIA, SARDEGNA],
+    from: "2021/05/17 00:00:00",
+    to: "2021/05/23 23:59:59",
+    regions: [VALLE_D_AOSTA],
     cities: [],
   },
 ];
