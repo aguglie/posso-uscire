@@ -42,8 +42,8 @@ const commonDetails = [
     en: "❌ Shopping malls are closed on holidays and days before holidays.",
   },
   {
-    it: "🛏 Coprifuoco dalle 22.00 alle 05.00.",
-    en: "🛏 Curfew from 10 PM to 5 AM.",
+    it: "🛏 Coprifuoco dalle 23.00 alle 05.00.",
+    en: "🛏 Curfew from 11 PM to 5 AM.",
   },
   {
     it:
@@ -74,6 +74,10 @@ const moreDetails = [
   {
     it: "🎭 Aperti cinema e teatri. E' possibile partecipare a concerti.",
     en: "🎭 Cinemas and theaters are open. It is possible to attend concerts.",
+  },
+  {
+    it: "🏋️‍♂️ Riaprono le palestre a partire dal 24 Maggio.",
+    en: "🏋️‍♂️ Gyms reopen starting from May 24th.",
   },
   {
     it: "⛪ Consentito l' accesso ai luoghi di culto e funzioni religiose.",

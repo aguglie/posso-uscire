@@ -44,8 +44,8 @@ const zonaArancione = {
       en: "❌ Shopping malls are closed on holidays and days before holidays.",
     },
     {
-      it: "🛏 Coprifuoco dalle 22.00 alle 05.00.",
-      en: "🛏 Curfew from 10 PM to 5 AM.",
+      it: "🛏 Coprifuoco dalle 23.00 alle 05.00.",
+      en: "🛏 Curfew from 11 PM to 5 AM.",
     },
     {
       it:
