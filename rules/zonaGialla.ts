@@ -34,12 +34,10 @@ const commonDetails = [
       "🍻 Bars and restaurants are open, you are free to sit only outdoors. Home delivery is always allowed.",
   },
   {
-    it: "🛍 Negozi aperti.",
-    en: "🛍 Shops are open.",
-  },
-  {
-    it: "❌ Centri commerciali chiusi durante i festivi e prefestivi.",
-    en: "❌ Shopping malls are closed on holidays and days before holidays.",
+    it:
+      "🛍 Negozi aperti. Centri commerciali possono aprire durante i festivi e prefestivi.",
+    en:
+      "🛍 Shops are open. Shopping malls are free to open on holidays and days before holidays.",
   },
   {
     it: "🛏 Coprifuoco dalle 23.00 alle 05.00.",
