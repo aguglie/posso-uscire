@@ -30,9 +30,9 @@ const commonDetails = [
   },
   {
     it:
-      "🍻 Bar e ristoranti aperti, servizio al tavolo anche al chiuso. Puoi sedere solo all'aperto a partire dalle 18. E' sempre consentito il servizio di consegna a domicilio.",
+      "🍻 Bar e ristoranti aperti, servizio al tavolo anche al chiuso. E' sempre consentito il servizio di consegna a domicilio.",
     en:
-      "🍻 Bars and restaurants are open, you are free to sit. You can sit only outdoor after 6pm. Home delivery is always allowed.",
+      "🍻 Bars and restaurants are open, you are free to sit indoor and outdoor. Home delivery is always allowed.",
   },
   {
     it:
