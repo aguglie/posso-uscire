@@ -1,3 +1,26 @@
+import {
+  ABRUZZO,
+  BASILICATA,
+  CALABRIA,
+  CAMPANIA,
+  EMILIA_ROMAGNA,
+  FRIULI_VENEZIA_GIULIA,
+  LAZIO,
+  LIGURIA,
+  LOMBARDIA,
+  MARCHE,
+  MOLISE,
+  PIEMONTE,
+  PUGLIA,
+  SARDEGNA,
+  SICILIA,
+  TOSCANA,
+  TRENTINO_ALTO_ADIGE,
+  UMBRIA,
+  VALLE_D_AOSTA,
+  VENETO,
+} from "./Constants";
+
 const zonaBianca = {
   name: {
     it: "⬜ Zona Bianca",
@@ -25,4 +48,12 @@ const zonaBianca = {
   ],
 };
 
-export default [];
+export default [
+  {
+    ...zonaBianca,
+    from: "2021/06/01 00:00:00",
+    to: "2021/06/06 23:59:59",
+    regions: [FRIULI_VENEZIA_GIULIA, MOLISE, SARDEGNA],
+    cities: [],
+  },
+];

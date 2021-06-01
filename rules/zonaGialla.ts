@@ -17,6 +17,7 @@ import {
   TOSCANA,
   TRENTINO_ALTO_ADIGE,
   UMBRIA,
+  VALLE_D_AOSTA,
   VENETO,
 } from "./Constants";
 
@@ -29,9 +30,9 @@ const commonDetails = [
   },
   {
     it:
-      "🍻 Bar e ristoranti aperti, servizio al tavolo solo se all'aperto. E' sempre consentito il servizio di consegna a domicilio.",
+      "🍻 Bar e ristoranti aperti, servizio al tavolo anche al chiuso. Puoi sedere solo all'aperto a partire dalle 18. E' sempre consentito il servizio di consegna a domicilio.",
     en:
-      "🍻 Bars and restaurants are open, you are free to sit only outdoors. Home delivery is always allowed.",
+      "🍻 Bars and restaurants are open, you are free to sit. You can sit only outdoor after 6pm. Home delivery is always allowed.",
   },
   {
     it:
@@ -99,13 +100,12 @@ const zonaGialla = {
 export default [
   {
     ...zonaGialla,
-    from: "2021/05/10 00:00:00",
-    to: "2021/05/16 23:59:59",
+    from: "2021/06/01 00:00:00",
+    to: "2021/06/06 23:59:59",
     regions: [
       PIEMONTE,
       LOMBARDIA,
       TRENTINO_ALTO_ADIGE,
-      FRIULI_VENEZIA_GIULIA,
       VENETO,
       LIGURIA,
       EMILIA_ROMAGNA,
@@ -114,38 +114,12 @@ export default [
       MARCHE,
       LAZIO,
       ABRUZZO,
-      MOLISE,
-      CAMPANIA,
-      PUGLIA,
-      BASILICATA,
-      CALABRIA,
-    ],
-    cities: [],
-  },
-  {
-    ...zonaGialla,
-    from: "2021/05/17 00:00:00",
-    to: "2021/05/23 23:59:59",
-    regions: [
-      PIEMONTE,
-      LOMBARDIA,
-      TRENTINO_ALTO_ADIGE,
-      FRIULI_VENEZIA_GIULIA,
-      VENETO,
-      LIGURIA,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      UMBRIA,
-      MARCHE,
-      LAZIO,
-      ABRUZZO,
-      MOLISE,
       CAMPANIA,
       PUGLIA,
       BASILICATA,
       CALABRIA,
       SICILIA,
-      SARDEGNA,
+      VALLE_D_AOSTA,
     ],
     cities: [],
   },
