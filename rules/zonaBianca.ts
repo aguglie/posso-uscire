@@ -56,4 +56,19 @@ export default [
     regions: [FRIULI_VENEZIA_GIULIA, MOLISE, SARDEGNA],
     cities: [],
   },
+  {
+    ...zonaBianca,
+    from: "2021/06/07 00:00:00",
+    to: "2021/06/13 23:59:59",
+    regions: [
+      LIGURIA,
+      VENETO,
+      FRIULI_VENEZIA_GIULIA,
+      UMBRIA,
+      ABRUZZO,
+      MOLISE,
+      SARDEGNA,
+    ],
+    cities: [],
+  },
 ];
