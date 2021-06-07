@@ -1,11 +1,9 @@
 import {
-  ABRUZZO,
   BASILICATA,
   CALABRIA,
   CAMPANIA,
   EMILIA_ROMAGNA,
   LAZIO,
-  LIGURIA,
   LOMBARDIA,
   MARCHE,
   PIEMONTE,
@@ -13,12 +11,14 @@ import {
   SICILIA,
   TOSCANA,
   TRENTINO_ALTO_ADIGE,
-  UMBRIA,
   VALLE_D_AOSTA,
-  VENETO,
 } from "./Constants";
 
 const commonDetails = [
+  {
+    it: "🛏 Coprifuoco dalle 24.00 alle 05.00.",
+    en: "🛏 Curfew from 12 PM to 5 AM.",
+  },
   {
     it:
       "👭 Si può uscire (al massimo in 4 non conviventi) per raggiungere amici e parenti una volta al giorno.",
@@ -36,10 +36,6 @@ const commonDetails = [
       "🛍 Negozi aperti. Centri commerciali possono aprire durante i festivi e prefestivi.",
     en:
       "🛍 Shops are open. Shopping malls are free to open on holidays and days before holidays.",
-  },
-  {
-    it: "🛏 Coprifuoco dalle 23.00 alle 05.00.",
-    en: "🛏 Curfew from 11 PM to 5 AM.",
   },
   {
     it:
@@ -72,8 +68,8 @@ const moreDetails = [
     en: "🎭 Cinemas and theaters are open. It is possible to attend concerts.",
   },
   {
-    it: "🏋️‍♂️ Riaprono le palestre a partire dal 24 Maggio.",
-    en: "🏋️‍♂️ Gyms reopen starting from May 24th.",
+    it: "🏋️‍♂️ Riaprono le palestre. Riapronolo le piscine dal 1 Luglio.",
+    en: "🏋️‍♂️ Gyms reopen. Pools are open from 1st July.",
   },
   {
     it: "⛪ Consentito l' accesso ai luoghi di culto e funzioni religiose.",
@@ -95,31 +91,6 @@ const zonaGialla = {
 };
 
 export default [
-  {
-    ...zonaGialla,
-    from: "2021/06/01 00:00:00",
-    to: "2021/06/06 23:59:59",
-    regions: [
-      PIEMONTE,
-      LOMBARDIA,
-      TRENTINO_ALTO_ADIGE,
-      VENETO,
-      LIGURIA,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      UMBRIA,
-      MARCHE,
-      LAZIO,
-      ABRUZZO,
-      CAMPANIA,
-      PUGLIA,
-      BASILICATA,
-      CALABRIA,
-      SICILIA,
-      VALLE_D_AOSTA,
-    ],
-    cities: [],
-  },
   {
     ...zonaGialla,
     from: "2021/06/07 00:00:00",

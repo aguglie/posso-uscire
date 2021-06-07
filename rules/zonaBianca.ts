@@ -1,23 +1,10 @@
 import {
   ABRUZZO,
-  BASILICATA,
-  CALABRIA,
-  CAMPANIA,
-  EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
-  LAZIO,
   LIGURIA,
-  LOMBARDIA,
-  MARCHE,
   MOLISE,
-  PIEMONTE,
-  PUGLIA,
   SARDEGNA,
-  SICILIA,
-  TOSCANA,
-  TRENTINO_ALTO_ADIGE,
   UMBRIA,
-  VALLE_D_AOSTA,
   VENETO,
 } from "./Constants";
 
@@ -28,6 +15,10 @@ const zonaBianca = {
   },
   details: [
     {
+      it: "🛏 Nessun coprifuoco.",
+      en: "🛏 No curfew.",
+    },
+    {
       it: "🍻 Bar e ristoranti aperti.",
       en: "🍻 Bars and restaurants open.",
     },
@@ -36,8 +27,8 @@ const zonaBianca = {
       en: "🛍 Shops are open.",
     },
     {
-      it: "🛏 Nessun coprifuoco.",
-      en: "🛏 No curfew.",
+      it: "🏋️‍♂️ Palestre e piscine sono aperte.",
+      en: "🏋️‍♂️ Gyms and pools are open.",
     },
     {
       it:
@@ -49,13 +40,6 @@ const zonaBianca = {
 };
 
 export default [
-  {
-    ...zonaBianca,
-    from: "2021/06/01 00:00:00",
-    to: "2021/06/06 23:59:59",
-    regions: [FRIULI_VENEZIA_GIULIA, MOLISE, SARDEGNA],
-    cities: [],
-  },
   {
     ...zonaBianca,
     from: "2021/06/07 00:00:00",
