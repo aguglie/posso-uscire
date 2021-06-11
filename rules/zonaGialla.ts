@@ -1,5 +1,6 @@
 import {
   BASILICATA,
+  BOLZANO,
   CALABRIA,
   CAMPANIA,
   EMILIA_ROMAGNA,
@@ -111,5 +112,20 @@ export default [
       VALLE_D_AOSTA,
     ],
     cities: [],
+  },
+  {
+    ...zonaGialla,
+    from: "2021/06/14 00:00:00",
+    to: "2021/06/20 23:59:59",
+    regions: [
+      TOSCANA,
+      MARCHE,
+      CAMPANIA,
+      BASILICATA,
+      CALABRIA,
+      SICILIA,
+      VALLE_D_AOSTA,
+    ],
+    cities: [BOLZANO],
   },
 ];
