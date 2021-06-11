@@ -36,12 +36,6 @@ const zonaBianca = {
       it: "🏋️‍♂️ Palestre e piscine sono aperte.",
       en: "🏋️‍♂️ Gyms and pools are open.",
     },
-    {
-      it:
-        "📝 Puoi muoverti liberamente nella tua regione. Autocertificazione necessaria per spostamenti verso regione di un altro colore.",
-      en:
-        "📝 Free to move inside you region. Self-certification is needed to move to a differently-coloured region.",
-    },
   ],
 };
 
