@@ -91,41 +91,4 @@ const zonaGialla = {
   moreDetails,
 };
 
-export default [
-  {
-    ...zonaGialla,
-    from: "2021/06/07 00:00:00",
-    to: "2021/06/13 23:59:59",
-    regions: [
-      PIEMONTE,
-      LOMBARDIA,
-      TRENTINO_ALTO_ADIGE,
-      EMILIA_ROMAGNA,
-      TOSCANA,
-      MARCHE,
-      LAZIO,
-      CAMPANIA,
-      PUGLIA,
-      BASILICATA,
-      CALABRIA,
-      SICILIA,
-      VALLE_D_AOSTA,
-    ],
-    cities: [],
-  },
-  {
-    ...zonaGialla,
-    from: "2021/06/14 00:00:00",
-    to: "2021/06/20 23:59:59",
-    regions: [
-      TOSCANA,
-      MARCHE,
-      CAMPANIA,
-      BASILICATA,
-      CALABRIA,
-      SICILIA,
-      VALLE_D_AOSTA,
-    ],
-    cities: [BOLZANO],
-  },
-];
+export default [];

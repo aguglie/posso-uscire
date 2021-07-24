@@ -1,17 +1,25 @@
 import {
   ABRUZZO,
+  BASILICATA,
+  BOLZANO,
+  CALABRIA,
+  CAMPANIA,
   EMILIA_ROMAGNA,
   FRIULI_VENEZIA_GIULIA,
   LAZIO,
   LIGURIA,
   LOMBARDIA,
+  MARCHE,
   MOLISE,
   PIEMONTE,
   PUGLIA,
   SARDEGNA,
+  SICILIA,
+  TOSCANA,
   TRENTO,
   UMBRIA,
-  VENETO,
+  VALLE_D_AOSTA,
+  VENETO
 } from "./Constants";
 
 const zonaBianca = {
@@ -42,23 +50,8 @@ const zonaBianca = {
 export default [
   {
     ...zonaBianca,
-    from: "2021/06/07 00:00:00",
-    to: "2021/06/13 23:59:59",
-    regions: [
-      LIGURIA,
-      VENETO,
-      FRIULI_VENEZIA_GIULIA,
-      UMBRIA,
-      ABRUZZO,
-      MOLISE,
-      SARDEGNA,
-    ],
-    cities: [],
-  },
-  {
-    ...zonaBianca,
-    from: "2021/06/14 00:00:00",
-    to: "2021/06/20 23:59:59",
+    from: "2021/06/20 00:00:00",
+    to: "2021/08/30 23:59:59",
     regions: [
       LIGURIA,
       VENETO,
@@ -72,7 +65,14 @@ export default [
       LOMBARDIA,
       PIEMONTE,
       PUGLIA,
+      TOSCANA,
+      MARCHE,
+      CAMPANIA,
+      BASILICATA,
+      CALABRIA,
+      SICILIA,
+      VALLE_D_AOSTA
     ],
-    cities: [TRENTO],
-  },
+    cities: [TRENTO, BOLZANO]
+  }
 ];
