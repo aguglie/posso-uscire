@@ -19,7 +19,7 @@ import {
   TRENTO,
   UMBRIA,
   VALLE_D_AOSTA,
-  VENETO
+  VENETO,
 } from "./Constants";
 
 const zonaBianca = {
@@ -71,8 +71,8 @@ export default [
       BASILICATA,
       CALABRIA,
       SICILIA,
-      VALLE_D_AOSTA
+      VALLE_D_AOSTA,
     ],
-    cities: [TRENTO, BOLZANO]
-  }
+    cities: [TRENTO, BOLZANO],
+  },
 ];
