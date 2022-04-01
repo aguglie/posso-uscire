@@ -2,7 +2,7 @@
 
 Questa semplice webApp ha lo scopo di aiutare a capire quali regole restrittive sono attive in base alla provincia di residenza.
 
-Il sito è consultabile all'indirizzo https://possouscire.casa/
+~~Il sito è consultabile all'indirizzo https://possouscire.casa/~~. Il sito non è più online! Grazie a tutti quelli che hanno contribuito 😊
 
 ## Come Contribuire
 Il contributo al progetto è libero, 
